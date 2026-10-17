@@ -166,8 +166,10 @@ export const WallshaderWindow = GObject.registerClass(
       );
       header.pack_start(this.searchButton);
       header.pack_end(
-        iconButton('document-edit-symbolic', 'Show wallpaper controls', () =>
-          this.split.set_show_sidebar(!this.split.get_show_sidebar()),
+        iconButton(
+          'applications-graphics-symbolic',
+          'Customize wallpaper',
+          () => this.split.set_show_sidebar(!this.split.get_show_sidebar()),
         ),
       );
       const menu = new Gio.Menu();

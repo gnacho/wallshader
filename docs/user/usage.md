@@ -191,7 +191,8 @@ choose **Restore Previous Wallpaper** to return
 to the background you had before the first apply. Multiple applies preserve that
 original background until you restore it.
 
-On a narrow window, use the edit button in the header to show the controls.
+On a narrow window, use the **Customize wallpaper** palette button in the header
+to show the controls.
 Keyboard shortcuts: Ctrl+F for search and Ctrl+Q to quit.
 
 To report a bug, open **About Wallshader** from the app menu and choose

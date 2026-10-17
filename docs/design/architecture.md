@@ -9,8 +9,10 @@ framework, Electron process, or network service.
 The artwork carries the visual identity. Adwaita supplies the system font,
 window colors, controls, and accent. The collection and preview occupy the main
 pane; a trailing inspector holds composition and wallpaper apply controls. Below 880 px,
-the inspector becomes an overlay. Labels are left aligned, the preview follows
-the output aspect ratio, and the gallery uses two or three columns. Gallery rows
+the inspector becomes an overlay. A palette icon in the header toggles the
+Customize inspector, with the tooltip “Customize wallpaper.” Labels are left
+aligned, the preview follows the output aspect ratio, and the gallery uses two or
+three columns. Gallery rows
 stay at their natural height so surplus vertical space does not stretch the cards.
 Gallery thumbnails in All and its category filters show each template's first
 **Original** preset. The All split button returns to the complete gallery when
