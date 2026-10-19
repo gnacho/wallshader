@@ -1,7 +1,5 @@
 # Wallshader
 
-[![Listed on Vibe GNOME](https://vibe-gnome.org/badges/listed-on-vibe-gnome-light.svg)](https://vibe-gnome.org/apps/5/wallshader)
-
 A native GNOME wallpaper app, written in **GJS, GTK 4, and libadwaita**, using
 [Paper Shaders](https://github.com/paper-design/shaders).
 
@@ -185,3 +183,6 @@ Wallshader is GPL-3.0-or-later; see [COPYING](COPYING). The unmodified
 Its [LICENSE](data/third-party/Paper-Shaders-LICENSE) and
 [NOTICE](data/third-party/Paper-Shaders-NOTICE) are preserved in the installation.
 The upstream source was checked at `43cd68db79fa0b1759f72ffc941b3238e2a3954c`.
+
+[![Listed on Vibe GNOME](https://vibe-gnome.org/badges/listed-on-vibe-gnome-light.svg)](https://vibe-gnome.org/apps/5/wallshader)
+
