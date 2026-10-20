@@ -17,8 +17,8 @@ full-resolution PNG. Favorites and adjustments are saved. The app menu can resto
 your previous wallpaper.
 
 Choose **Still image** or **Animated shader** in the Wallpaper controls.
-Animated wallpapers use a small GJS Shell extension on **GNOME 50 / Wayland** and
-keep playing after the editor closes. They support every shader, multiple monitors,
+Animated wallpapers use a small GJS Shell extension on **GNOME 50 or 51 on Wayland**
+and keep playing after the editor closes. They support every shader, multiple monitors,
 30/60 FPS, pause/resume, and stop. Activities shows the animated shader in workspace
 previews and thumbnails. Maximized windows and screen lock keep playback enabled;
 only the Pause control pauses animation. The renderer stays running through lock
@@ -40,7 +40,7 @@ Meson, and a source checkout are not needed to run a packaged installation.**
 
 Requires GJS 1.80+, GTK 4.14+, libadwaita 1.5+, WebKitGTK 2.44+ (6.0 API) with WebGL 2,
 and a GNOME desktop for wallpaper integration. Animated wallpapers require
-**GNOME 50 on Wayland**; still wallpapers and PNG export work on older desktops
+**GNOME 50 or 51 on Wayland**; still wallpapers and PNG export work on older desktops
 that meet the app's runtime requirements.
 
 ### Fedora
@@ -89,8 +89,8 @@ cd packaging/aur
 makepkg --syncdeps --install
 ```
 
-Bun, Meson, and gettext are build dependencies only. Animated wallpapers require GNOME 50
-on Wayland. See the [AUR guide](docs/implementation/aur.md) for verification,
+Bun, Meson, and gettext are build dependencies only. Animated wallpapers require
+GNOME 50 or 51 on Wayland. See the [AUR guide](docs/implementation/aur.md) for verification,
 publication, and release updates.
 
 ### Development packages and archives
@@ -148,6 +148,10 @@ bun run build
 ./scripts/run.sh
 ```
 
+After changing the Shell extension, run `./scripts/install-extension.sh --files-only`,
+then log out and back in. GNOME loads extension modules for the current session;
+restarting the editor keeps using that loaded code.
+
 For a custom prefix, use `meson setup build-native --prefix=/your/prefix` and
 `meson install -C build-native` after installing dependencies and building assets.
 The application runs with GJS; runtime assets are entirely local.
@@ -175,8 +179,8 @@ logo processors, and verifies PNG content through 4K. It checks persistence and
 wallpaper apply/restore with isolated settings. It never changes your desktop
 background. Rendered test images and interface snapshots are saved in `artifacts/`.
 
-The Shell integration test starts a separate headless GNOME 50 instance with two
-virtual monitors, a private session bus, isolated XDG directories, and in-memory
+The Shell integration test starts a separate headless GNOME 50 or 51 instance with
+two virtual monitors, a private session bus, isolated XDG directories, and in-memory
 settings. It verifies desktop placement, animation, pause, reverse playback,
 updates, stop, and extension cleanup without changing the real desktop.
 

@@ -40,7 +40,7 @@ collisions within a shader.
 show the dialog and thumbnail grid. Logic tests cover saved-state normalization,
 immutable copies, selection matching, and image restoration across presets.
 
-`bun run test:shell` needs GNOME Shell 50 with its headless Wayland backend. It
+`bun run test:shell` needs GNOME Shell 50 or 51 with its headless Wayland backend. It
 starts a separate Shell on a private D-Bus session, with private runtime, data,
 config and cache directories, in-memory settings, and two virtual monitors.
 Use `WALLSHADER_TEST_MONITORS=1 bun run test:shell` for the single-monitor case.
@@ -75,8 +75,11 @@ frames for cleared/black regions, including
 checking that paused pixels remain unchanged during both operations. This covers
 the rendering path under window update load, but cannot rule out every driver-specific
 or intermittent artifact on a physical display.
-Overview checks cover live clones on both monitors, workspace thumbnails,
+Desktop checks require background-actor presentation with hidden renderer windows.
+Overview checks cover live background actors on both monitors, workspace thumbnails,
 continued animation, manual pause, and cleanup after closing, stopping or disabling.
+Pixel checks compare the live overview with GNOME's original background: all four
+rounded corners must retain their original pixels while the centers show the shader.
 Its test-only session mode enables only the live wallpaper extension and its test
 driver. `artifacts/shell-test.log` and desktop captures help diagnose failures.
 The Shell test also switches between GPU and Compatibility, verifies the new
@@ -122,8 +125,8 @@ and replaces the installed directory, restoring the previous directory if the
 replacement fails. `--files-only` installs the bundle without contacting Shell
 or changing enabled extensions; it is also exercised by an isolated installer
 test. The app offers initial setup through its first animated apply. The
-extension currently targets GNOME 50 on Wayland. After first installation, log out
-and back in to let GNOME discover it. Updating an already loaded extension also
+extension currently targets GNOME 50 or 51 on Wayland. After first installation,
+log out and back in to let GNOME discover it. Updating an already loaded extension also
 requires a fresh session; GNOME cannot reload imported JavaScript modules in place.
 The live D-Bus status includes `compositing`, `panelVisible` and
 `fullscreenMonitors` for diagnosing a disappearing top bar after that fresh login.

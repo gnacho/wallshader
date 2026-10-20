@@ -2,7 +2,7 @@
   "uuid": "wallshader@wallshader.github.io",
   "name": "Wallshader Live Wallpaper",
   "description": "Animated Paper shaders on the GNOME desktop, controlled by the native Wallshader app.",
-  "shell-version": ["50"],
+  "shell-version": ["50", "51"],
   "version": 1,
   "session-modes": ["user", "unlock-dialog"]
 }

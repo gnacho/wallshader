@@ -29,7 +29,7 @@ cp -R build/extension "$XDG_DATA_HOME/gnome-shell/extensions/wallshader@wallshad
 cp tests/shell-driver.js "$XDG_DATA_HOME/gnome-shell/extensions/wallshader-test@local/extension.js"
 cp tests/resize-client.js "$XDG_DATA_HOME/gnome-shell/extensions/wallshader-test@local/resize-client.js"
 cat > "$XDG_DATA_HOME/gnome-shell/extensions/wallshader-test@local/metadata.json" <<'JSON'
-{"uuid":"wallshader-test@local","name":"Wallshader Test","description":"Isolated integration tests","shell-version":["50"],"session-modes":["wallshader-test","user","unlock-dialog"]}
+{"uuid":"wallshader-test@local","name":"Wallshader Test","description":"Isolated integration tests","shell-version":["50","51"],"session-modes":["wallshader-test","user","unlock-dialog"]}
 JSON
 cat > "$XDG_DATA_HOME/gnome-shell/modes/wallshader-test.json" <<'JSON'
 {"parentMode":"user","showWelcomeDialog":false,"enabledExtensions":["wallshader@wallshader.github.io","wallshader-test@local"]}
