@@ -97,7 +97,7 @@ Depends: gjs (>= 1.80), gir1.2-gtk-4.0 (>= 4.14), gir1.2-adw-1 (>= 1.5), gir1.2-
 Homepage: https://github.com/stonega/wallshader
 Description: Native GNOME wallpapers made with Paper Shaders
  Edit shader wallpapers, export PNG images, and apply still backgrounds.
- Animated wallpapers use the bundled extension on GNOME 50 with Wayland.
+ Animated wallpapers use the bundled extension on GNOME 50 or 51 with Wayland.
 CONTROL
 cat > "$package_root/DEBIAN/postinst" <<'POSTINST'
 #!/bin/sh
@@ -138,7 +138,7 @@ Requires: librsvg2
 
 %description
 Edit shader wallpapers, export PNG images, and apply still backgrounds.
-Animated wallpapers use the bundled extension on GNOME 50 with Wayland.
+Animated wallpapers use the bundled extension on GNOME 50 or 51 with Wayland.
 
 %prep
 %setup -q -c -T

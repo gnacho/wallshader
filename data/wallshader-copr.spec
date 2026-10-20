@@ -1,5 +1,5 @@
 Name: wallshader
-Version: 0.1.12
+Version: 0.1.13
 Release: 1
 Summary: Native GNOME wallpapers made with Paper Shaders
 License: GPL-3.0-or-later AND Apache-2.0
@@ -20,7 +20,7 @@ Requires: librsvg2
 
 %description
 Edit shader wallpapers, export PNG images, and apply still backgrounds.
-Animated wallpapers use the bundled extension on GNOME 50 with Wayland.
+Animated wallpapers use the bundled extension on GNOME 50 or 51 with Wayland.
 
 %prep
 %setup -q -n wallshader-v%{version}

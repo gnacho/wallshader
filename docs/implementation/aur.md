@@ -8,7 +8,7 @@ for initial submission, but this alone does not create an AUR listing.
 Bun bundles the renderer and extension at build time; the installed application
 runs with GJS. The package is architecture-independent (`arch=('any')`). Runtime
 dependencies use Arch package names. GNOME Shell is optional for export and still
-images; animated wallpapers require GNOME 50 on Wayland.
+images; animated wallpapers require GNOME 50 or 51 on Wayland.
 
 ## Build and verify on Arch
 
