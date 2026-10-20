@@ -1,11 +1,21 @@
 # Translations
 
 Wallshader follows the system language through GNU gettext. English is the source
-language and fallback; Spanish (`es`) is the first catalog. Open the app menu's
+language and fallback. Bundled catalogs include Spanish (`es`), German (`de`),
+French (`fr`), Japanese (`ja`), Korean (`ko`), Brazilian Portuguese (`pt_BR`),
+Simplified Chinese (`zh_CN`), and Traditional Chinese (`zh_TW`). Open the app menu's
 **Preferences** dialog (Ctrl+,) to choose **System Default**, **English**, or an
 installed translation, shown in its own language. Choices are saved immediately
-and take effect the next time Wallshader opens. The Spanish catalog is an initial draft;
-native-speaker review is welcome.
+and take effect the next time Wallshader opens. The restart notice appears below
+the language selector.
+
+These are initial translation drafts; fluent-speaker review is welcome. Spanish
+covers all 768 current messages. Each of the seven additional catalogs covers 534
+messages: the app interface, dialogs, errors, shader names, editor labels, and
+options. The remaining 234 detailed Paper parameter explanations fall back to
+English. Empty entries remain in the PO files so contributors can complete them
+without changing app code. Do not mark English copies as translated to inflate
+coverage.
 
 ## Development
 
@@ -79,8 +89,8 @@ existing state format and requires no migration.
    header and plural rule. Use `fr` or `de` for language-wide catalogs; regional
    examples are `pt_BR`, `zh_CN`, and `zh_TW`.
 4. Run the checks below and review the UI with a fluent speaker. Missing or fuzzy
-   messages fall back to English. French, German, Brazilian Portuguese, Simplified
-   Chinese, and Traditional Chinese are proposed next contributions.
+   messages fall back to English. Check the app interface and technical tooltips
+   separately when reporting translation coverage.
 
 New languages need no application logic changes. Every package includes all
 languages in `LINGUAS`, and Preferences discovers their compiled catalogs.
@@ -97,12 +107,12 @@ LC_ALL=ar_EG.UTF-8 LANGUAGE=ar bun run test:native --i18n-test
 bun run test:shell
 ```
 
-`test:i18n` needs an installed `en_US.UTF-8` locale. It checks English, Spanish,
+`test:i18n` needs an installed `en_US.UTF-8` locale. It checks every bundled catalog,
 unsupported-language fallback, the C locale, search, settings round trips, and
 the bundled renderer's independent lookup. GNU gettext uses English under
 `LC_ALL=C` or `C.UTF-8`, even with `LANGUAGE=es`.
 An explicit saved language can override this when an installed UTF-8 message
-locale is available. Startup checks cover saved English/Spanish overrides and
+locale is available. Startup checks cover every saved language override and
 unavailable or invalid preferences using private settings directories.
 
 Native tests use private D-Bus sessions, isolated XDG directories, and in-memory

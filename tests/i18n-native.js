@@ -3,6 +3,8 @@ import GLib from 'gi://GLib';
 import { exportSettings, parseSettings } from '../src/sharing.js';
 import Adw from 'gi://Adw?version=1';
 import { Store } from '../src/storage.js';
+import { localeExpectation } from './i18n-expectations.js';
+import { languageName } from '../src/language.js';
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -48,31 +50,30 @@ export async function run(window) {
       GLib.getenv('XDG_CONFIG_HOME')?.includes('wallshader-test.'),
     'Localization smoke tests require isolated settings and data',
   );
-  const spanish = GLib.getenv('LANGUAGE') === 'es';
+  const language = GLib.getenv('LANGUAGE');
+  const expected = localeExpectation(language);
   const background = window.wallpaper.settings.get_string('picture-uri');
   await window.ready;
   await window.preview.pause(true);
   assert(
-    window.applyButton.label ===
-      (spanish ? 'Establecer fondo animado' : 'Set Animated Wallpaper'),
+    window.applyButton.label === expected.animated,
     'Wallpaper action was not localized',
   );
   assert(
-    window.categoryLabel.label === (spanish ? 'Todos' : 'All'),
+    window.categoryLabel.label === expected.all,
     'Category label was not localized',
   );
   assert(
-    window.liveFps.get_model().get_string(0) ===
-      (spanish ? '30 FPS · menor consumo' : '30 FPS · less power'),
+    window.liveFps.get_model().get_string(0) === expected.fps,
     'Frame-rate choices were not translated',
   );
   await window.selectPreset('daybreak');
   assert(
-    window.nameLabel.label === (spanish ? 'Amanecer' : 'Daybreak') &&
+    window.nameLabel.label === expected.daybreak &&
       window.preset.name === 'Daybreak',
     'Display name changed the canonical preset name',
   );
-  window.search.set_text(spanish ? 'amanecer' : 'daybreak');
+  window.search.set_text(expected.daybreak);
   window._filter();
   assert(
     window._cards.get('daybreak').child.visible &&
@@ -88,8 +89,7 @@ export async function run(window) {
   window.search.set_text('');
   window._filter();
   assert(
-    window.editor.fitChoice.choice.get_model().get_string(2) ===
-      (spanish ? 'cubrir' : 'cover'),
+    window.editor.fitChoice.choice.get_model().get_string(2) === expected.cover,
     'Shader option display was not translated',
   );
   window.editor.fitChoice.choice.selected = 2;
@@ -106,22 +106,34 @@ export async function run(window) {
     'Preferences action did not open a native dialog',
   );
   assert(
-    preferences.title === (spanish ? 'Preferencias' : 'Preferences') &&
-      preferences.languageRow.get_model().get_string(0) ===
-        (spanish ? 'Predeterminado del sistema' : 'System Default'),
+    preferences.title === expected.preferences &&
+      preferences.languageRow.get_model().get_string(0) === expected.system,
     'Preferences labels were not translated correctly',
   );
-  assert(
-    preferences.languageRow.get_model().get_string(1) === 'English' &&
-      preferences.languageRow.get_model().get_string(2) === 'Español',
-    'Language choices are missing their native names',
-  );
-  const changeTo = spanish ? 'en' : 'es';
+  for (const code of [
+    'en',
+    'es',
+    'de',
+    'fr',
+    'ja',
+    'ko',
+    'pt_BR',
+    'zh_CN',
+    'zh_TW',
+  ])
+    assert(
+      preferences.languageRow
+        .get_model()
+        .get_string(preferences.languageCodes.indexOf(code)) ===
+        languageName(code),
+      `Language choice ${code} is missing its native name`,
+    );
+  const changeTo = language === 'es' ? 'en' : 'es';
   preferences.languageRow.selected =
     preferences.languageCodes.indexOf(changeTo);
   assert(
     new Store().state.language === changeTo &&
-      window.nameLabel.label === (spanish ? 'Amanecer' : 'Daybreak'),
+      window.nameLabel.label === expected.daybreak,
     'Language preference was not saved independently of the current UI',
   );
   await screenshot(window, 'preferences');
@@ -178,7 +190,7 @@ export async function run(window) {
   window.set_default_size(560, 700);
   assert(
     window._collectionName({ name: 'Custom', builtinName: true }) ===
-      (spanish ? 'Personalizado' : 'Custom') &&
+      expected.custom &&
       window._collectionName({ name: 'Custom' }) === 'Custom',
     'Collection labels confused application text with a user name',
   );

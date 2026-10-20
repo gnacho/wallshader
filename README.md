@@ -153,7 +153,10 @@ For a custom prefix, use `meson setup build-native --prefix=/your/prefix` and
 The application runs with GJS; runtime assets are entirely local.
 
 Choose the app language in **Preferences → Language** (Ctrl+,), or follow the
-system default. Spanish is the first translation, with English fallback. Changes
+system default. Translations include Spanish, German, French, Japanese, Korean,
+Brazilian Portuguese, Simplified Chinese, and Traditional Chinese, with English
+fallback for untranslated messages. The seven new catalogs cover the app and
+editor controls; detailed Paper tooltips still use English. Changes
 take effect on the next launch. See [Translations](docs/implementation/translations.md)
 to contribute or add another language.
 

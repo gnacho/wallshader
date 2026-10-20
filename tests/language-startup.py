@@ -18,6 +18,12 @@ with tempfile.TemporaryDirectory(prefix="wallshader-language-test.") as director
         ("../es", "en", "en_US.UTF-8", "en"),
         ("es", "en", "C.UTF-8", "es"),
     ]
+    languages = [line.split('#')[0].strip() for line in pathlib.Path('po/LINGUAS').read_text().splitlines()]
+    for language in filter(None, languages):
+        cases.extend([
+            (language, "en", "en_US.UTF-8", language),
+            (language, "en", "C.UTF-8", language),
+        ])
     for saved, system, locale, expected in cases:
         (config / "state.json").write_text(json.dumps({"language": saved}))
         env = {

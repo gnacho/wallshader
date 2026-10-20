@@ -14,4 +14,10 @@ test('language choices use their own names so they remain recognizable', () => {
   expect(languageName('en')).toBe('English');
   expect(languageName('es')).toBe('Español');
   expect(languageName('fr')).toBe('Français');
+  expect(languageName('de')).toBe('Deutsch');
+  expect(languageName('ja')).toBe('日本語');
+  expect(languageName('ko')).toBe('한국어');
+  expect(languageName('pt_BR')).toBe('Português (Brasil)');
+  expect(languageName('zh_CN')).toBe('简体中文');
+  expect(languageName('zh_TW')).toBe('繁體中文');
 });

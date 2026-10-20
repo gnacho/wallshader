@@ -19,9 +19,15 @@ export function showPreferences(window) {
   });
   const group = new Adw.PreferencesGroup({
     title: _('Interface'),
-    description: _(
-      'Language changes take effect the next time you open Wallshader.',
-    ),
+  });
+  const notice = new Gtk.Label({
+    label: _('Language changes take effect the next time you open Wallshader.'),
+    wrap: true,
+    xalign: 0,
+    css_classes: ['dim-label'],
+    margin_top: 12,
+    margin_start: 12,
+    margin_end: 12,
   });
   const selected = Math.max(
     0,
@@ -64,6 +70,7 @@ export function showPreferences(window) {
     }
   });
   group.add(row);
+  group.add(notice);
   group.add(error);
   page.add(group);
   dialog.add(page);

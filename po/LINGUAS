@@ -1,2 +1,9 @@
 # One gettext locale per line. See docs/implementation/translations.md.
+de
 es
+fr
+ja
+ko
+pt_BR
+zh_CN
+zh_TW

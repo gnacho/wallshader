@@ -8,6 +8,9 @@ export function normalizeLanguage(value) {
 }
 
 export function languageName(code) {
+  // Identify the writing system explicitly; both catalogs are Chinese.
+  if (code === 'zh_CN') return '简体中文';
+  if (code === 'zh_TW') return '繁體中文';
   const tag = code.split('@')[0].replaceAll('_', '-');
   try {
     const name = new Intl.DisplayNames([tag], { type: 'language' }).of(tag);
