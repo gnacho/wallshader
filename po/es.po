@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/stonega/wallshader/issues\n"
 "POT-Creation-Date: 2026-10-20 10:56+0800\n"
 "PO-Revision-Date: 2026-10-20 00:00+0000\n"
-"Last-Translator: Wallshader contributors\n"
+"Last-Translator: Nacho <vnacho@proton.me>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "Dale un poco más de color a tu escritorio"
 
 #: data/io.github.wallshader.Wallshader.desktop:9
 msgid "Wallpaper;Background;Shader;Paper;Gradient;"
-msgstr "Fondo de pantalla;Fondo;Shader;Paper;Degradado;"
+msgstr "Fondo de pantalla;Fondo;Wallpaper;Background;Shader;Paper;Degradado;Gradient;"
 
 #. Translators: Paper shader names, controls, descriptions, and enum labels.
 #: po/paper-catalog.js:5
@@ -209,7 +209,7 @@ msgstr "Torrente sanguíneo"
 
 #: po/paper-catalog.js:45
 msgid "Bloom"
-msgstr "Resplandor"
+msgstr "Fulgor"
 
 #: po/paper-catalog.js:46
 msgid "Blur"
@@ -465,7 +465,7 @@ msgstr "Sección transversal"
 
 #: po/paper-catalog.js:102
 msgid "Crumple Count"
-msgstr "Número de arrugas"
+msgstr "Número de arrugas gruesas"
 
 #: po/paper-catalog.js:103
 msgid "Crumple-like facets repeating across the surface (0 to 1)"
@@ -473,7 +473,7 @@ msgstr "Facetas de papel arrugado que se repiten por la superficie (0 a 1)"
 
 #: po/paper-catalog.js:104
 msgid "Crumples"
-msgstr "Arrugas"
+msgstr "Arrugas gruesas"
 
 #: po/paper-catalog.js:105
 msgid "Curly thread-like noise covering the surface evenly (0 to 1)"
@@ -658,11 +658,11 @@ msgstr ""
 
 #: po/paper-catalog.js:146
 msgid "Fade In"
-msgstr "Desvanecimiento inicial"
+msgstr "Fundido de entrada"
 
 #: po/paper-catalog.js:147
 msgid "Fade Out"
-msgstr "Desvanecimiento final"
+msgstr "Fundido de salida"
 
 #: po/paper-catalog.js:148
 msgid "Falloff"
@@ -937,7 +937,7 @@ msgstr "Tipo de cuadrícula (0 = cuadrada, 1 = hexagonal)"
 
 #: po/paper-catalog.js:209
 msgid "Groovy"
-msgstr "Psicodélico"
+msgstr "Groovy"
 
 #: po/paper-catalog.js:210
 msgid "Halftone CMYK"
@@ -1196,7 +1196,7 @@ msgstr "Tamaño central"
 
 #: po/paper-catalog.js:267
 msgid "Mixing"
-msgstr "Mezcla"
+msgstr "Mezclado"
 
 #: po/paper-catalog.js:268
 msgid "Mosaic"
@@ -1582,7 +1582,7 @@ msgstr "Borde pulsante"
 
 #: po/paper-catalog.js:345
 msgid "Purple"
-msgstr "Morado"
+msgstr "Púrpura"
 
 #: po/paper-catalog.js:346
 msgid "R-channel dispersion (-1 to 1)"
@@ -1729,7 +1729,7 @@ msgstr "Escala del grano de rugosidad; requiere roughness > 0 (0 a 1)"
 
 #: po/paper-catalog.js:373
 msgid "Scale of the wrinkle facets, needs wrinkles > 0 (0 to 1)"
-msgstr "Escala de las facetas de los pliegues; requiere wrinkles > 0 (0 a 1)"
+msgstr "Escala de las facetas de las arrugas; requiere wrinkles > 0 (0 a 1)"
 
 #: po/paper-catalog.js:374
 msgid ""
@@ -2016,7 +2016,7 @@ msgstr "Expansión"
 
 #: po/paper-catalog.js:434
 msgid "Spreading"
-msgstr "Expansión"
+msgstr "Propagación"
 
 #: po/paper-catalog.js:435
 msgid ""
@@ -2350,7 +2350,7 @@ msgstr "Gusanos"
 
 #: po/paper-catalog.js:504
 msgid "Wrinkle Size"
-msgstr "Tamaño de pliegues"
+msgstr "Tamaño de arrugas"
 
 #: po/paper-catalog.js:505
 msgid "Wrinkles"
@@ -2835,7 +2835,7 @@ msgstr ""
 #: src/live.js:57
 msgid "The extension bundle contains an unsupported file. Rebuild Wallshader."
 msgstr ""
-"El paquete de la extensión contiene un archivo no admitido. Vuelve a "
+"El paquete de la extensión contiene un archivo no compatible. Vuelve a "
 "compilar Wallshader."
 
 #: src/live.js:70
@@ -2880,7 +2880,7 @@ msgstr ""
 #. Translators: replace this with your name and optional contact details.
 #: src/main.js:68
 msgid "translator-credits"
-msgstr "Colaboradores de Wallshader"
+msgstr "Nacho"
 
 #: src/main.js:70
 msgid "Shaders"
@@ -2998,7 +2998,7 @@ msgstr ""
 
 #: src/sharing.js:41
 msgid "This is not a supported Wallshader settings file."
-msgstr "Este archivo de ajustes de Wallshader no es compatible."
+msgstr "Este no es un archivo de ajustes de Wallshader compatible."
 
 #: src/sharing.js:47
 msgid ""
@@ -3430,7 +3430,7 @@ msgstr "Renderizando…"
 
 #: src/window.js:1324
 msgid "Wallpaper applied, but the preset could not be saved: {error}"
-msgstr "El fondo se aplicó, pero no se pudo guardar el preajuste: {error}"
+msgstr "El fondo de pantalla se aplicó, pero no se pudo guardar el preajuste: {error}"
 
 #: src/window.js:1358
 msgid "{name} set as wallpaper"
@@ -3459,7 +3459,7 @@ msgstr "Se solicitó un fondo animado"
 
 #: src/window.js:1445
 msgid "Log Out to Finish Setup"
-msgstr "Cierra la sesión para terminar la configuración"
+msgstr "Cerrar la sesión para terminar la configuración"
 
 #: src/window.js:1450
 msgid "Got It"
