@@ -1,6 +1,7 @@
 import { _, N_ } from './translation.js';
 import { PAPER_SHADERS } from './paper-catalog.js';
 import { migratePaperTexture } from './paper-migration.js';
+import { normalizeLanguage } from './language.js';
 
 export const SHADERS = PAPER_SHADERS;
 
@@ -360,6 +361,7 @@ export function normalizeState(input = {}) {
   const favorites = normalizeCollection(input.favorites, input.presets);
   return {
     version: 3,
+    language: normalizeLanguage(input.language),
     debugInfo: input.debugInfo === true,
     wallpaperTarget: input.wallpaperTarget === 'kitty' ? 'kitty' : 'desktop',
     liveRendering: input.liveRendering === 'gpu' ? 'gpu' : 'compatibility',

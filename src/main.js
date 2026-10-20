@@ -7,6 +7,7 @@ import GLib from 'gi://GLib';
 import System from 'system';
 import { APP_ID, ROOT } from './paths.js';
 import { WallshaderWindow } from './window.js';
+import { showPreferences } from './preferences.js';
 
 const i18nTest = ARGV.includes('--i18n-test');
 const smoke = ARGV.includes('--smoke-test') || i18nTest;
@@ -47,6 +48,10 @@ app.connect('startup', () => {
     app.get_active_window()?.showSettings('settings'),
   );
   action('copy-code', () => app.get_active_window()?.showSettings('code'));
+  action('preferences', () => {
+    const window = app.get_active_window();
+    if (window) showPreferences(window);
+  }, ['<primary>comma']);
   action('about', () => {
     const about = new Adw.AboutDialog({
       application_name: 'Wallshader',

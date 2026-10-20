@@ -1,8 +1,10 @@
 # Translations
 
 Wallshader follows the system language through GNU gettext. English is the source
-language and fallback; Spanish (`es`) is the first catalog. Restart the app after
-changing the system language. The Spanish catalog is an initial draft;
+language and fallback; Spanish (`es`) is the first catalog. Open the app menu's
+**Preferences** dialog (Ctrl+,) to choose **System Default**, **English**, or an
+installed translation, shown in its own language. Choices are saved immediately
+and take effect the next time Wallshader opens. The Spanish catalog is an initial draft;
 native-speaker review is welcome.
 
 ## Development
@@ -18,6 +20,12 @@ import `_`, `pgettext`, `ngettext`, and `format` from this module. Shared logic 
 `src/translation.js`, which falls back to English in Bun and the canvas renderer.
 The native preview translates literal renderer errors when receiving them.
 Third-party diagnostic messages retain the text supplied by those libraries.
+Startup reads the saved `language` preference before translating any UI text.
+An empty value follows the environment; an explicit code overrides `LANGUAGE`
+for this process. Only the message locale may change when starting from C;
+number and date formatting keep their system settings. Unavailable languages
+fall back to the system choice. The app does not restart desktop playback when
+this preference changes; its renderer reads the preference on its next start.
 
 Meson installs catalogs under its configured `localedir`. The installed launcher
 passes that path using `WALLSHADER_LOCALEDIR`, including for custom prefixes. The
@@ -75,7 +83,7 @@ existing state format and requires no migration.
    Chinese, and Traditional Chinese are proposed next contributions.
 
 New languages need no application logic changes. Every package includes all
-languages in `LINGUAS`.
+languages in `LINGUAS`, and Preferences discovers their compiled catalogs.
 
 ## Verification
 
@@ -93,6 +101,9 @@ bun run test:shell
 unsupported-language fallback, the C locale, search, settings round trips, and
 the bundled renderer's independent lookup. GNU gettext uses English under
 `LC_ALL=C` or `C.UTF-8`, even with `LANGUAGE=es`.
+An explicit saved language can override this when an installed UTF-8 message
+locale is available. Startup checks cover saved English/Spanish overrides and
+unavailable or invalid preferences using private settings directories.
 
 Native tests use private D-Bus sessions, isolated XDG directories, and in-memory
 GSettings. The localization test never applies a wallpaper. It checks translated

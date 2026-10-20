@@ -19,6 +19,7 @@ for (const file of [
   'paths.js',
   'i18n.js',
   'translation.js',
+  'language.js',
   'storage.js',
   'catalog.js',
   'paper-catalog.js',

@@ -8,7 +8,7 @@ appdir = get_option('prefix') / get_option('datadir') / 'wallshader'
 subdir('po')
 
 renderer = custom_target('paper-renderer',
-  input: ['src/renderer/renderer.js', 'src/renderer/kitty-shader.js', 'src/renderer/kitty-compat.js', 'src/renderer/kitty-texture.js', 'src/kitty-config.js', 'src/renderer/frame-clock.js', 'src/renderer/frame-stats.js', 'src/renderer/index.html', 'src/catalog.js', 'src/paper-catalog.js', 'src/paper-migration.js', 'src/translation.js', 'src/renderer/sample.webp', 'bun.lock'],
+  input: ['src/renderer/renderer.js', 'src/renderer/kitty-shader.js', 'src/renderer/kitty-compat.js', 'src/renderer/kitty-texture.js', 'src/kitty-config.js', 'src/renderer/frame-clock.js', 'src/renderer/frame-stats.js', 'src/renderer/index.html', 'src/catalog.js', 'src/paper-catalog.js', 'src/paper-migration.js', 'src/translation.js', 'src/language.js', 'src/renderer/sample.webp', 'bun.lock'],
   output: ['renderer.js', 'index.html'],
   command: [bun, files('scripts/build.js'), '@OUTDIR@'],
   build_by_default: true,

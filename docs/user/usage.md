@@ -1,8 +1,9 @@
 # Using Wallshader
 
-Wallshader follows your system language, with English fallback. Spanish is the
-first translation. Restart the app after changing your system language. Saved
-preset names and copied shader settings keep their original text and values.
+Open the app menu's **Preferences** dialog (Ctrl+,) and choose **Language** to use
+**System Default**, **English**, or **Español**. The choice is saved immediately
+and takes effect the next time you open Wallshader. Saved preset names and copied
+shader settings keep their original text and values.
 
 1. Choose a wallpaper from **All**. Click its right arrow to select **Effects**,
    **Image Filters**, or **Logo Animations**, matching

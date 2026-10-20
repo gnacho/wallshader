@@ -10,6 +10,10 @@ for presentation; shader parameters, stored names, and exported code stay lossle
 The renderer bundle includes its own catalogs. See
 [translation maintenance](../implementation/translations.md) for the extraction,
 installation, and contributor workflow.
+The app menu's native Preferences dialog lists installed translations by their
+own names, with System Default and English always available. The saved choice
+is loaded before UI construction on the next launch; changing it does not
+restart the app or desktop playback.
 
 ## Interface
 

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wallshader\n"
 "Report-Msgid-Bugs-To: https://github.com/stonega/wallshader/issues\n"
-"POT-Creation-Date: 2026-10-20 10:15+0800\n"
+"POT-Creation-Date: 2026-10-20 10:33+0800\n"
 "PO-Revision-Date: 2026-10-20 00:00+0000\n"
 "Last-Translator: Wallshader contributors\n"
 "Language-Team: Spanish\n"
@@ -435,7 +435,7 @@ msgstr ""
 "Color sobre la imagen o el fondo que sigue la forma cáustica; requiere alfa "
 "de colorHighlight > 0 (0 a 1)"
 
-#: po/paper-catalog.js:96 src/catalog.js:59
+#: po/paper-catalog.js:96 src/catalog.js:60
 msgid "Contour"
 msgstr "Contorno"
 
@@ -639,7 +639,7 @@ msgstr "Suavizado del borde de los puntos (0 a 1)"
 msgid "Edges"
 msgstr "Bordes"
 
-#: po/paper-catalog.js:142 src/window.js:294
+#: po/paper-catalog.js:142 src/window.js:295
 msgid "Effects"
 msgstr "Efectos"
 
@@ -1001,7 +1001,7 @@ msgstr ""
 msgid "Image Dithering"
 msgstr "Tramado de imagen"
 
-#: po/paper-catalog.js:223 src/window.js:295
+#: po/paper-catalog.js:223 src/window.js:296
 msgid "Image Filters"
 msgstr "Filtros de imagen"
 
@@ -1139,7 +1139,7 @@ msgstr "Tinta viva"
 msgid "Lo-Fi"
 msgstr "Lo-Fi"
 
-#: po/paper-catalog.js:254 src/window.js:296
+#: po/paper-catalog.js:254 src/window.js:297
 msgid "Logo Animations"
 msgstr "Animaciones de logotipos"
 
@@ -1202,7 +1202,7 @@ msgstr "Mezcla"
 msgid "Mosaic"
 msgstr "Mosaico"
 
-#: po/paper-catalog.js:269 src/catalog.js:51
+#: po/paper-catalog.js:269 src/catalog.js:52
 msgid "Moss"
 msgstr "Musgo"
 
@@ -2524,111 +2524,111 @@ msgstr "onda"
 msgid "zigzag"
 msgstr "zigzag"
 
-#: src/catalog.js:10
+#: src/catalog.js:11
 msgid "Aurora"
 msgstr "Aurora"
 
-#: src/catalog.js:12
+#: src/catalog.js:13
 msgid "A slow drift of violet, blue, and light."
 msgstr "Una suave deriva de violeta, azul y luz."
 
-#: src/catalog.js:18
+#: src/catalog.js:19
 msgid "Daybreak"
 msgstr "Amanecer"
 
-#: src/catalog.js:20
+#: src/catalog.js:21
 msgid "The softer side of the morning."
 msgstr "El lado más suave de la mañana."
 
-#: src/catalog.js:26
+#: src/catalog.js:27
 msgid "Tidal"
 msgstr "Mareas"
 
-#: src/catalog.js:28
+#: src/catalog.js:29
 msgid "Cool currents finding their own rhythm."
 msgstr "Corrientes frescas que encuentran su propio ritmo."
 
-#: src/catalog.js:35
+#: src/catalog.js:36
 msgid "Dusk"
 msgstr "Crepúsculo"
 
-#: src/catalog.js:37
+#: src/catalog.js:38
 msgid "The last light, held a little longer."
 msgstr "La última luz, retenida un poco más."
 
-#: src/catalog.js:43
+#: src/catalog.js:44
 msgid "Ribbon"
 msgstr "Cinta"
 
-#: src/catalog.js:45
+#: src/catalog.js:46
 msgid "Broad folds of color in gentle motion."
 msgstr "Amplios pliegues de color en movimiento suave."
 
-#: src/catalog.js:53
+#: src/catalog.js:54
 msgid "A quiet patch of green for your desktop."
 msgstr "Un tranquilo rincón verde para tu escritorio."
 
-#: src/catalog.js:61
+#: src/catalog.js:62
 msgid "A landscape drawn in flowing layers."
 msgstr "Un paisaje dibujado en capas fluidas."
 
-#: src/catalog.js:69
+#: src/catalog.js:70
 msgid "Pearl"
 msgstr "Perla"
 
-#: src/catalog.js:71
+#: src/catalog.js:72
 msgid "A little iridescence, without the noise."
 msgstr "Un poco de iridiscencia, sin ruido."
 
-#: src/catalog.js:78
+#: src/catalog.js:79
 msgid "Ember"
 msgstr "Brasa"
 
-#: src/catalog.js:80
+#: src/catalog.js:81
 msgid "Warm color with a darker heart."
 msgstr "Colores cálidos con un corazón oscuro."
 
-#: src/catalog.js:87
+#: src/catalog.js:88
 msgid "Scale"
 msgstr "Escala"
 
-#: src/catalog.js:88
+#: src/catalog.js:89
 msgid "Rotation"
 msgstr "Rotación"
 
-#: src/catalog.js:89
+#: src/catalog.js:90
 msgid "Offset X"
 msgstr "Desplazamiento X"
 
-#: src/catalog.js:90
+#: src/catalog.js:91
 msgid "Offset Y"
 msgstr "Desplazamiento Y"
 
-#: src/catalog.js:91
+#: src/catalog.js:92
 msgid "Origin X"
 msgstr "Origen X"
 
-#: src/catalog.js:92
+#: src/catalog.js:93
 msgid "Origin Y"
 msgstr "Origen Y"
 
-#: src/catalog.js:93
+#: src/catalog.js:94
 msgid "World width"
 msgstr "Anchura del mundo"
 
-#: src/catalog.js:94
+#: src/catalog.js:95
 msgid "World height"
 msgstr "Altura del mundo"
 
-#: src/catalog.js:95
+#: src/catalog.js:96
 msgid "Speed"
 msgstr "Velocidad"
 
-#: src/catalog.js:96
+#: src/catalog.js:97
 msgid "Frame (ms)"
 msgstr "Fotograma (ms)"
 
-#: src/catalog.js:428
+#: src/catalog.js:430
 msgid "Choose a wallpaper size up to 8K."
 msgstr "Elige un tamaño de fondo de pantalla de hasta 8K."
 
@@ -2865,11 +2865,11 @@ msgstr ""
 "Activa Wallshader Live Wallpaper en Extensiones de GNOME e inténtalo de "
 "nuevo."
 
-#: src/main.js:55
+#: src/main.js:60
 msgid "Wallshader contributors"
 msgstr "Colaboradores de Wallshader"
 
-#: src/main.js:57
+#: src/main.js:62
 msgid ""
 "A little color for your desktop. Native GNOME wallpapers made with Paper "
 "Shaders."
@@ -2878,11 +2878,11 @@ msgstr ""
 "Paper Shaders."
 
 #. Translators: replace this with your name and optional contact details.
-#: src/main.js:63
+#: src/main.js:68
 msgid "translator-credits"
 msgstr "Colaboradores de Wallshader"
 
-#: src/main.js:65
+#: src/main.js:70
 msgid "Shaders"
 msgstr "Shaders"
 
@@ -2933,6 +2933,30 @@ msgstr "La vista previa se ha cerrado."
 msgid "Rendering {name} took too long. Try a smaller image size."
 msgstr ""
 "El renderizado de {name} tardó demasiado. Prueba un tamaño de imagen menor."
+
+#: src/preferences.js:12 src/window.js:183
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: src/preferences.js:17
+msgid "General"
+msgstr "General"
+
+#: src/preferences.js:21
+msgid "Interface"
+msgstr "Interfaz"
+
+#: src/preferences.js:23
+msgid "Language changes take effect the next time you open Wallshader."
+msgstr "Los cambios de idioma se aplicarán la próxima vez que abras Wallshader."
+
+#: src/preferences.js:31
+msgid "Language"
+msgstr "Idioma"
+
+#: src/preferences.js:34
+msgid "System Default"
+msgstr "Predeterminado del sistema"
 
 #: src/save-preset-dialog.js:13
 msgid "Save Preset"
@@ -3092,143 +3116,143 @@ msgstr "Mostrar información de depuración"
 msgid "Restore Previous Wallpaper"
 msgstr "Restaurar fondo de pantalla anterior"
 
-#: src/window.js:183
+#: src/window.js:184
 msgid "About Wallshader"
 msgstr "Acerca de Wallshader"
 
-#: src/window.js:184
+#: src/window.js:185
 msgid "Quit"
 msgstr "Salir"
 
-#: src/window.js:198
+#: src/window.js:199
 msgid "Search wallpapers"
 msgstr "Buscar fondos de pantalla"
 
-#: src/window.js:216
+#: src/window.js:217
 msgid "Export PNG…"
 msgstr "Exportar PNG…"
 
-#: src/window.js:221
+#: src/window.js:222
 msgid "Save Preset…"
 msgstr "Guardar preajuste…"
 
-#: src/window.js:226
+#: src/window.js:227
 msgid "Reset Changes"
 msgstr "Restablecer cambios"
 
-#: src/window.js:231 src/window.js:985
+#: src/window.js:232 src/window.js:986
 msgid "Add to favorites"
 msgstr "Añadir a favoritos"
 
-#: src/window.js:255
+#: src/window.js:256
 msgid "Preview unavailable"
 msgstr "Vista previa no disponible"
 
-#: src/window.js:265 src/window.js:1182
+#: src/window.js:266 src/window.js:1183
 msgid "Play preview"
 msgstr "Reproducir vista previa"
 
-#: src/window.js:265 src/window.js:1182
+#: src/window.js:266 src/window.js:1183
 msgid "Pause preview"
 msgstr "Pausar vista previa"
 
-#: src/window.js:293 src/window.js:323
+#: src/window.js:294 src/window.js:324
 msgid "All"
 msgstr "Todos"
 
-#: src/window.js:329
+#: src/window.js:330
 msgid "Show all wallpapers"
 msgstr "Mostrar todos los fondos de pantalla"
 
-#: src/window.js:330
+#: src/window.js:331
 msgid "Choose a wallpaper category"
 msgstr "Elegir una categoría de fondos de pantalla"
 
-#: src/window.js:341
+#: src/window.js:342
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: src/window.js:342
+#: src/window.js:343
 msgid "Recent"
 msgstr "Recientes"
 
-#: src/window.js:428 src/window.js:1022
+#: src/window.js:429 src/window.js:1023
 msgid "No wallpapers found"
 msgstr "No se encontraron fondos de pantalla"
 
-#: src/window.js:433 src/window.js:1029
+#: src/window.js:434 src/window.js:1030
 msgid "Try a different search or collection."
 msgstr "Prueba otra búsqueda o colección."
 
-#: src/window.js:442
+#: src/window.js:443
 msgid "Made with Paper Shaders"
 msgstr "Creado con Paper Shaders"
 
-#: src/window.js:456
+#: src/window.js:457
 msgid "Customize"
 msgstr "Personalizar"
 
-#: src/window.js:476
+#: src/window.js:477
 msgid "Desktop"
 msgstr "Escritorio"
 
-#: src/window.js:479 src/window.js:703 src/window.js:1291
+#: src/window.js:480 src/window.js:704 src/window.js:1292
 msgid "Set as Wallpaper"
 msgstr "Establecer como fondo de pantalla"
 
-#: src/window.js:482
+#: src/window.js:483
 msgid "Apply this frame to your GNOME desktop"
 msgstr "Aplicar este fotograma al escritorio de GNOME"
 
-#: src/window.js:483
+#: src/window.js:484
 msgid "Choose wallpaper destination"
 msgstr "Elegir destino del fondo de pantalla"
 
-#: src/window.js:490 src/window.js:508 src/window.js:817
+#: src/window.js:491 src/window.js:509 src/window.js:818
 msgid "Wallpaper Settings"
 msgstr "Ajustes del fondo de pantalla"
 
-#: src/window.js:520 src/window.js:524
+#: src/window.js:521 src/window.js:525
 msgid "Wallpaper mode"
 msgstr "Modo del fondo de pantalla"
 
-#: src/window.js:522
+#: src/window.js:523
 msgid "Still image"
 msgstr "Imagen estática"
 
-#: src/window.js:522
+#: src/window.js:523
 msgid "Animated shader"
 msgstr "Shader animado"
 
-#: src/window.js:533
+#: src/window.js:534
 msgid "Animation frame rate"
 msgstr "Frecuencia de fotogramas de la animación"
 
-#: src/window.js:537
+#: src/window.js:538
 msgid "30 FPS · less power"
 msgstr "30 FPS · menor consumo"
 
-#: src/window.js:538
+#: src/window.js:539
 msgid "60 FPS · smoother"
 msgstr "60 FPS · más fluidez"
 
-#: src/window.js:540
+#: src/window.js:541
 msgid "Wallpaper frame rate"
 msgstr "Frecuencia de fotogramas del fondo"
 
-#: src/window.js:545 src/window.js:553
+#: src/window.js:546 src/window.js:554
 msgid "Wallpaper rendering"
 msgstr "Renderizado del fondo de pantalla"
 
-#: src/window.js:549
+#: src/window.js:550
 msgid "Compatibility (default)"
 msgstr "Compatibilidad (predeterminado)"
 
-#: src/window.js:550
+#: src/window.js:551
 msgid "GPU (experimental)"
 msgstr "GPU (experimental)"
 
-#: src/window.js:564
+#: src/window.js:565
 msgid ""
 "GPU mode may reduce CPU use but can cause flickering. Takes effect when you "
 "apply the wallpaper."
@@ -3236,19 +3260,19 @@ msgstr ""
 "El modo GPU puede reducir el uso de CPU, pero puede causar parpadeos. Se "
 "activa al aplicar el fondo de pantalla."
 
-#: src/window.js:571
+#: src/window.js:572
 msgid "Runs on the desktop after closing this app."
 msgstr "Se ejecuta en el escritorio después de cerrar esta aplicación."
 
-#: src/window.js:578 src/window.js:693
+#: src/window.js:579 src/window.js:694
 msgid "Pause"
 msgstr "Pausar"
 
-#: src/window.js:586
+#: src/window.js:587
 msgid "Stop"
 msgstr "Detener"
 
-#: src/window.js:601
+#: src/window.js:602
 msgid ""
 "Saves to {path}. Kitty reloads automatically; if disabled, reload its "
 "settings or open a new instance."
@@ -3256,27 +3280,27 @@ msgstr ""
 "Se guarda en {path}. Kitty se recarga automáticamente; si está desactivado, "
 "recarga sus ajustes o abre una instancia nueva."
 
-#: src/window.js:610
+#: src/window.js:611
 msgid "Restore Kitty Background"
 msgstr "Restaurar fondo de Kitty"
 
-#: src/window.js:617
+#: src/window.js:618
 msgid "Output resolution"
 msgstr "Resolución de salida"
 
-#: src/window.js:619
+#: src/window.js:620
 msgid "This display"
 msgstr "Esta pantalla"
 
-#: src/window.js:627
+#: src/window.js:628
 msgid "Wallpaper resolution"
 msgstr "Resolución del fondo de pantalla"
 
-#: src/window.js:633 src/window.js:676
+#: src/window.js:634 src/window.js:677
 msgid "Applies a still image to light and dark appearances."
 msgstr "Aplica una imagen estática a las apariencias clara y oscura."
 
-#: src/window.js:667
+#: src/window.js:668
 msgid ""
 "Animates behind terminal text with a dark tint. Requires Kitty 0.49 or newer "
 "with its shader compiler. Kitty controls animation timing and window size. "
@@ -3288,14 +3312,14 @@ msgstr ""
 "animación y el tamaño de la ventana. Las imágenes se optimizan a 128 píxeles "
 "y 256 colores. El primer uso puede tardar un momento en compilar."
 
-#: src/window.js:670
+#: src/window.js:671
 msgid ""
 "Uses the current frame as a tinted Kitty background. Your desktop is "
 "unchanged."
 msgstr ""
 "Usa el fotograma actual como fondo tintado de Kitty. El escritorio no cambia."
 
-#: src/window.js:674
+#: src/window.js:675
 msgid ""
 "Animates on every display and sets its first frame as the still background. "
 "GNOME 50 on Wayland is required."
@@ -3303,19 +3327,19 @@ msgstr ""
 "Se anima en todas las pantallas y establece el primer fotograma como fondo "
 "estático. Requiere GNOME 50 en Wayland."
 
-#: src/window.js:682
+#: src/window.js:683
 msgid "Starting desktop animation…"
 msgstr "Iniciando animación del escritorio…"
 
-#: src/window.js:683
+#: src/window.js:684
 msgid "Playing on desktop"
 msgstr "Reproduciendo en el escritorio"
 
-#: src/window.js:685
+#: src/window.js:686
 msgid "Ready. Keeps playing after closing this app."
 msgstr "Listo. Sigue reproduciéndose después de cerrar esta aplicación."
 
-#: src/window.js:687
+#: src/window.js:688
 msgid ""
 "First use installs animation support. GNOME may require one logout before it "
 "is available."
@@ -3323,136 +3347,136 @@ msgstr ""
 "El primer uso instala la compatibilidad con animaciones. GNOME puede "
 "requerir cerrar la sesión una vez para que esté disponible."
 
-#: src/window.js:693
+#: src/window.js:694
 msgid "Resume"
 msgstr "Reanudar"
 
-#: src/window.js:699
+#: src/window.js:700
 msgid "Set Kitty Background"
 msgstr "Establecer fondo de Kitty"
 
-#: src/window.js:700
+#: src/window.js:701
 msgid "Set Kitty Background (Still)"
 msgstr "Establecer fondo de Kitty (estático)"
 
-#: src/window.js:702
+#: src/window.js:703
 msgid "Set Animated Wallpaper"
 msgstr "Establecer fondo animado"
 
-#: src/window.js:707
+#: src/window.js:708
 msgid "Apply this background to Kitty"
 msgstr "Aplicar este fondo a Kitty"
 
-#: src/window.js:708
+#: src/window.js:709
 msgid "Apply this wallpaper to your GNOME desktop"
 msgstr "Aplicar este fondo de pantalla al escritorio de GNOME"
 
-#: src/window.js:745
+#: src/window.js:746
 msgid "Deleted “{name}”"
 msgstr "Se eliminó «{name}»"
 
-#: src/window.js:781
+#: src/window.js:782
 msgid "Saved “{name}”"
 msgstr "Se guardó «{name}»"
 
-#: src/window.js:797
+#: src/window.js:798
 msgid "Wait for the current image to finish rendering."
 msgstr "Espera a que termine de renderizarse la imagen actual."
 
-#: src/window.js:814
+#: src/window.js:815
 msgid "Import Paper Settings"
 msgstr "Importar ajustes de Paper"
 
-#: src/window.js:816
+#: src/window.js:817
 msgid "Paper Code"
 msgstr "Código de Paper"
 
-#: src/window.js:947
+#: src/window.js:948
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/window.js:985
+#: src/window.js:986
 msgid "Remove from favorites"
 msgstr "Quitar de favoritos"
 
-#: src/window.js:1019
+#: src/window.js:1020
 msgid "No favorites yet"
 msgstr "Aún no hay favoritos"
 
-#: src/window.js:1021
+#: src/window.js:1022
 msgid "No recent presets yet"
 msgstr "Aún no hay preajustes recientes"
 
-#: src/window.js:1026
+#: src/window.js:1027
 msgid "Star a preset to keep it here."
 msgstr "Marca un preajuste como favorito para guardarlo aquí."
 
-#: src/window.js:1028
+#: src/window.js:1029
 msgid "Applied desktop and Kitty presets appear here."
 msgstr "Aquí aparecen los preajustes aplicados al escritorio y a Kitty."
 
-#: src/window.js:1070
+#: src/window.js:1071
 msgid "Applied to Kitty"
 msgstr "Aplicado a Kitty"
 
-#: src/window.js:1170
+#: src/window.js:1171
 msgid "Wallpaper changes reset"
 msgstr "Cambios del fondo de pantalla restablecidos"
 
-#: src/window.js:1273
+#: src/window.js:1274
 msgid "Rendering…"
 msgstr "Renderizando…"
 
-#: src/window.js:1323
+#: src/window.js:1324
 msgid "Wallpaper applied, but the preset could not be saved: {error}"
 msgstr "El fondo se aplicó, pero no se pudo guardar el preajuste: {error}"
 
-#: src/window.js:1357
+#: src/window.js:1358
 msgid "{name} set as wallpaper"
 msgstr "{name} establecido como fondo de pantalla"
 
-#: src/window.js:1360 src/window.js:1436
+#: src/window.js:1361 src/window.js:1437
 msgid "Undo"
 msgstr "Deshacer"
 
-#: src/window.js:1384
+#: src/window.js:1385
 msgid "Kitty background saved. Reload Kitty settings if needed."
 msgstr "Fondo de Kitty guardado. Recarga los ajustes de Kitty si es necesario."
 
-#: src/window.js:1399
+#: src/window.js:1400
 msgid "Kitty background restored. Reload Kitty settings if needed."
 msgstr ""
 "Fondo de Kitty restaurado. Recarga los ajustes de Kitty si es necesario."
 
-#: src/window.js:1412
+#: src/window.js:1413
 msgid "Starting…"
 msgstr "Iniciando…"
 
-#: src/window.js:1435
+#: src/window.js:1436
 msgid "Animated wallpaper requested"
 msgstr "Se solicitó un fondo animado"
 
-#: src/window.js:1444
+#: src/window.js:1445
 msgid "Log Out to Finish Setup"
 msgstr "Cierra la sesión para terminar la configuración"
 
-#: src/window.js:1449
+#: src/window.js:1450
 msgid "Got It"
 msgstr "Entendido"
 
-#: src/window.js:1461
+#: src/window.js:1462
 msgid "Export Wallpaper"
 msgstr "Exportar fondo de pantalla"
 
-#: src/window.js:1464
+#: src/window.js:1465
 msgid "PNG images"
 msgstr "Imágenes PNG"
 
-#: src/window.js:1475
+#: src/window.js:1476
 msgid "Wallpaper exported"
 msgstr "Fondo de pantalla exportado"
 
-#: src/window.js:1491
+#: src/window.js:1492
 msgid "Previous wallpaper restored"
 msgstr "Fondo de pantalla anterior restaurado"
 

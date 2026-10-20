@@ -180,6 +180,7 @@ export const WallshaderWindow = GObject.registerClass(
       menu.append(_('Copy Paper Code…'), 'app.copy-code');
       menu.append(_('Show Debug Info'), 'win.debug-info');
       menu.append(_('Restore Previous Wallpaper'), 'app.restore');
+      menu.append(_('Preferences'), 'app.preferences');
       menu.append(_('About Wallshader'), 'app.about');
       menu.append(_('Quit'), 'app.quit');
       header.pack_end(

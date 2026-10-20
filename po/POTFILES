@@ -11,6 +11,7 @@ src/main.js
 src/preset-grid.js
 src/preset-options.js
 src/preview.js
+src/preferences.js
 src/save-preset-dialog.js
 src/saved-presets.js
 src/sharing.js

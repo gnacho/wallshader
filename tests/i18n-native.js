@@ -1,6 +1,8 @@
 import Gtk from 'gi://Gtk?version=4.0';
 import GLib from 'gi://GLib';
 import { exportSettings, parseSettings } from '../src/sharing.js';
+import Adw from 'gi://Adw?version=1';
+import { Store } from '../src/storage.js';
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -97,6 +99,64 @@ export async function run(window) {
     'Translated choice changed the shader enum value',
   );
   await screenshot(window, 'wide');
+  window.application.lookup_action('preferences').activate(null);
+  let preferences = window.preferencesDialog;
+  assert(
+    preferences instanceof Adw.PreferencesDialog,
+    'Preferences action did not open a native dialog',
+  );
+  assert(
+    preferences.title === (spanish ? 'Preferencias' : 'Preferences') &&
+      preferences.languageRow.get_model().get_string(0) ===
+        (spanish ? 'Predeterminado del sistema' : 'System Default'),
+    'Preferences labels were not translated correctly',
+  );
+  assert(
+    preferences.languageRow.get_model().get_string(1) === 'English' &&
+      preferences.languageRow.get_model().get_string(2) === 'Español',
+    'Language choices are missing their native names',
+  );
+  const changeTo = spanish ? 'en' : 'es';
+  preferences.languageRow.selected =
+    preferences.languageCodes.indexOf(changeTo);
+  assert(
+    new Store().state.language === changeTo &&
+      window.nameLabel.label === (spanish ? 'Amanecer' : 'Daybreak'),
+    'Language preference was not saved independently of the current UI',
+  );
+  await screenshot(window, 'preferences');
+  preferences.close();
+  await settle();
+  window.application.lookup_action('preferences').activate(null);
+  preferences = window.preferencesDialog;
+  assert(
+    preferences.languageCodes[preferences.languageRow.selected] === changeTo,
+    'Preferences did not remember the saved language',
+  );
+  const save = window.store.save;
+  window.store.save = () => {
+    throw new Error('Language setting test failed');
+  };
+  try {
+    preferences.languageRow.selected = 0;
+    assert(
+      preferences.languageCodes[preferences.languageRow.selected] ===
+        changeTo &&
+        window.store.state.language === changeTo &&
+        preferences.errorLabel.visible &&
+        new Store().state.language === changeTo,
+      'A failed settings write did not restore the language selection',
+    );
+  } finally {
+    window.store.save = save;
+  }
+  preferences.languageRow.selected = 0;
+  assert(
+    new Store().state.language === '',
+    'System language could not be restored',
+  );
+  preferences.close();
+  await settle();
   window.wallpaperSettings.present(window);
   await screenshot(window, 'settings');
   window.wallpaperSettings.close();
@@ -123,6 +183,10 @@ export async function run(window) {
     'Collection labels confused application text with a user name',
   );
   await screenshot(window, 'narrow');
+  window.application.lookup_action('preferences').activate(null);
+  await screenshot(window, 'preferences-narrow');
+  window.preferencesDialog.close();
+  await settle();
   window.split.show_sidebar = true;
   await screenshot(window, 'narrow-inspector');
   if (GLib.getenv('LANGUAGE') === 'ar')

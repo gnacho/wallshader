@@ -152,9 +152,10 @@ For a custom prefix, use `meson setup build-native --prefix=/your/prefix` and
 `meson install -C build-native` after installing dependencies and building assets.
 The application runs with GJS; runtime assets are entirely local.
 
-The app follows the system language, with Spanish as the first translation and
-English fallback. See [Translations](docs/implementation/translations.md) to
-contribute or add another language.
+Choose the app language in **Preferences → Language** (Ctrl+,), or follow the
+system default. Spanish is the first translation, with English fallback. Changes
+take effect on the next launch. See [Translations](docs/implementation/translations.md)
+to contribute or add another language.
 
 ## Verify
 
