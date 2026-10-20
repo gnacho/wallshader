@@ -1,6 +1,6 @@
 pkgbase = wallshader
 	pkgdesc = Native GNOME wallpapers made with Paper Shaders
-	pkgver = 0.1.12
+	pkgver = 0.1.13
 	pkgrel = 1
 	url = https://github.com/stonega/wallshader
 	arch = any
@@ -19,8 +19,8 @@ pkgbase = wallshader
 	depends = gsettings-desktop-schemas
 	depends = hicolor-icon-theme
 	depends = librsvg
-	optdepends = gnome-shell: GNOME 50 on Wayland is required for animated wallpapers
-	source = wallshader-0.1.12.tar.gz::https://github.com/stonega/wallshader/archive/refs/tags/v0.1.12.tar.gz
-	sha256sums = 4a362811088c137a85233db41e6b193dd4226a96713a015989bdfe1b2ab9428c
+	optdepends = gnome-shell: GNOME 50 or 51 on Wayland is required for animated wallpapers
+	source = wallshader-0.1.13.tar.gz::https://github.com/stonega/wallshader/archive/refs/tags/v0.1.13.tar.gz
+	sha256sums = 14c469d35e04109bc77773c60e79eb9e67aa8280f448663f899c7e43e741d148
 
 pkgname = wallshader
