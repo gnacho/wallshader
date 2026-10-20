@@ -1,3 +1,4 @@
+import { _, format } from './i18n.js';
 import Gtk from 'gi://Gtk?version=4.0';
 import Gdk from 'gi://Gdk?version=4.0';
 import GObject from 'gi://GObject';
@@ -45,7 +46,7 @@ export const ShaderEditor = GObject.registerClass(
       for (const field of definition.fields) {
         if (field.type === 'color')
           effect.append(
-            this._color(field.label, preset.params[field.key], (value) => {
+            this._color(_(field.label), preset.params[field.key], (value) => {
               preset.params[field.key] = value;
               this._emit();
             }),
@@ -57,7 +58,7 @@ export const ShaderEditor = GObject.registerClass(
         else if (field.type === 'enum')
           effect.append(
             this._choice(
-              field.label,
+              _(field.label),
               field.options,
               field.options.indexOf(preset.params[field.key]),
               (index) => {
@@ -69,9 +70,9 @@ export const ShaderEditor = GObject.registerClass(
         else if (field.type === 'boolean') {
           const row = new Gtk.Box({
             spacing: 12,
-            tooltip_text: field.description,
+            tooltip_text: _(field.description ?? field.label),
           });
-          row.append(text(field.label, { hexpand: true }));
+          row.append(text(_(field.label), { hexpand: true, wrap: true }));
           const toggle = new Gtk.Switch({
             active: preset.params[field.key],
             valign: Gtk.Align.CENTER,
@@ -84,11 +85,11 @@ export const ShaderEditor = GObject.registerClass(
           effect.append(row);
         }
       }
-      this.append(this._section('Shader settings', effect, true));
+      this.append(this._section(_('Shader settings'), effect, true));
 
       const transform = column(12);
       this.fitChoice = this._choice(
-        'Fit',
+        _('Fit'),
         ['none', 'contain', 'cover'],
         ['none', 'contain', 'cover'].indexOf(preset.fit),
         (index) => {
@@ -102,12 +103,12 @@ export const ShaderEditor = GObject.registerClass(
       ))
         transform.append(this._number(field, preset, field.key));
       transform.append(
-        text('A world size of 0 follows the canvas.', {
+        text(_('A world size of 0 follows the canvas.'), {
           wrap: true,
           css_classes: ['dim-label', 'caption'],
         }),
       );
-      this.append(this._section('Position & size', transform, false));
+      this.append(this._section(_('Position & size'), transform, false));
 
       const motion = column(12);
       for (const field of commonFields(preset.shader).filter((field) =>
@@ -116,11 +117,13 @@ export const ShaderEditor = GObject.registerClass(
         motion.append(this._number(field, preset, field.key));
       motion.append(
         text(
-          'Negative speed plays in reverse. Set speed to 0 to hold an exact frame.',
+          _(
+            'Negative speed plays in reverse. Set speed to 0 to hold an exact frame.',
+          ),
           { wrap: true, css_classes: ['dim-label', 'caption'] },
         ),
       );
-      this.append(this._section('Animation', motion, false));
+      this.append(this._section(_('Animation'), motion, false));
       this._updating = false;
     }
 
@@ -143,9 +146,9 @@ export const ShaderEditor = GObject.registerClass(
 
     _choice(title, options, selected, callback) {
       const box = column(5);
-      box.append(text(title, { css_classes: ['heading'] }));
+      box.append(text(title, { css_classes: ['heading'], wrap: true }));
       const choice = new Gtk.DropDown({
-        model: Gtk.StringList.new(options),
+        model: Gtk.StringList.new(options.map((option) => _(option))),
         selected: Math.max(0, selected),
         tooltip_text: title,
         enable_search: options.length > 8,
@@ -161,9 +164,9 @@ export const ShaderEditor = GObject.registerClass(
       const box = column(2);
       const row = new Gtk.Box({
         spacing: 8,
-        tooltip_text: field.description ?? field.label,
+        tooltip_text: _(field.description ?? field.label),
       });
-      row.append(text(field.label, { hexpand: true }));
+      row.append(text(_(field.label), { hexpand: true, wrap: true }));
       const adjustment = new Gtk.Adjustment({
         lower: field.min,
         upper: field.max,
@@ -180,7 +183,7 @@ export const ShaderEditor = GObject.registerClass(
         max_width_chars: 10,
         css_classes: ['editor-value'],
       });
-      spin.update_property([Gtk.AccessibleProperty.LABEL], [field.label]);
+      spin.update_property([Gtk.AccessibleProperty.LABEL], [_(field.label)]);
       adjustment.connect('value-changed', () => {
         target[field.key] = adjustment.value;
         this._emit();
@@ -195,7 +198,7 @@ export const ShaderEditor = GObject.registerClass(
           draw_value: false,
           hexpand: true,
         });
-        scale.update_property([Gtk.AccessibleProperty.LABEL], [field.label]);
+        scale.update_property([Gtk.AccessibleProperty.LABEL], [_(field.label)]);
         box.append(scale);
       }
       this.numericControls.set(identifier, { spin, adjustment });
@@ -216,18 +219,18 @@ export const ShaderEditor = GObject.registerClass(
       rgba.parse(value);
       const picker = new Gtk.ColorDialogButton({
         dialog: new Gtk.ColorDialog({
-          title: title || 'Choose color',
+          title: title || _('Choose color'),
           with_alpha: true,
         }),
         rgba,
-        tooltip_text: title || 'Choose color',
+        tooltip_text: title || _('Choose color'),
       });
       const entry = new Gtk.Entry({
         text: value,
         width_chars: 9,
         max_width_chars: 16,
         hexpand: true,
-        tooltip_text: 'Hex, RGB, or HSL color, with optional opacity',
+        tooltip_text: _('Hex, RGB, or HSL color, with optional opacity'),
       });
       let changing = false;
       const commit = () => {
@@ -282,7 +285,9 @@ export const ShaderEditor = GObject.registerClass(
       this.palette.set_visible(limit > 0);
       if (!limit) return;
       const row = new Gtk.Box({ spacing: 8 });
-      row.append(text('Colors', { hexpand: true, css_classes: ['heading'] }));
+      row.append(
+        text(_('Colors'), { hexpand: true, css_classes: ['heading'] }),
+      );
       this.colorCount = new Gtk.SpinButton({
         adjustment: new Gtk.Adjustment({
           lower: 1,
@@ -292,7 +297,7 @@ export const ShaderEditor = GObject.registerClass(
         }),
         numeric: true,
         digits: 0,
-        tooltip_text: `Number of colors (1–${limit})`,
+        tooltip_text: format(_('Number of colors (1–{limit})'), { limit }),
       });
       this.colorCount.connect('value-changed', () =>
         this.setColorCount(this.colorCount.get_value_as_int()),
@@ -305,11 +310,11 @@ export const ShaderEditor = GObject.registerClass(
           this._emit();
         });
         const controls = colorBox.get_last_child();
-        const up = button('go-up-symbolic', 'Move color up', () =>
+        const up = button('go-up-symbolic', _('Move color up'), () =>
           this.moveColor(index, -1),
         );
         up.sensitive = index > 0;
-        const down = button('go-down-symbolic', 'Move color down', () =>
+        const down = button('go-down-symbolic', _('Move color down'), () =>
           this.moveColor(index, 1),
         );
         down.sensitive = index < this.preset.colors.length - 1;
@@ -345,20 +350,23 @@ export const ShaderEditor = GObject.registerClass(
 
     _imageControls() {
       const box = column(6);
-      box.append(text('Source image', { css_classes: ['heading'] }));
+      box.append(text(_('Source image'), { css_classes: ['heading'] }));
       const name =
         this.preset.image === 'sample'
-          ? 'Built-in sample'
+          ? _('Built-in sample')
           : this.preset.image
-            ? 'Local image'
-            : 'No image (procedural shape)';
+            ? _('Local image')
+            : _('No image (procedural shape)');
       box.append(text(name, { css_classes: ['dim-label'], ellipsize: 3 }));
       const row = new Gtk.Box({ spacing: 6 });
-      const choose = new Gtk.Button({ label: 'Choose Image…', hexpand: true });
+      const choose = new Gtk.Button({
+        label: _('Choose Image…'),
+        hexpand: true,
+      });
       choose.connect('clicked', () => {
         const generation = this._generation;
-        const dialog = new Gtk.FileDialog({ title: 'Choose Shader Image' });
-        const filter = new Gtk.FileFilter({ name: 'Images' });
+        const dialog = new Gtk.FileDialog({ title: _('Choose Shader Image') });
+        const filter = new Gtk.FileFilter({ name: _('Images') });
         filter.add_pixbuf_formats();
         dialog.default_filter = filter;
         dialog.open(this.parentWindow, null, async (source, result) => {
@@ -380,7 +388,7 @@ export const ShaderEditor = GObject.registerClass(
       });
       row.append(choose);
       row.append(
-        button('edit-clear-symbolic', 'Remove image', () => {
+        button('edit-clear-symbolic', _('Remove image'), () => {
           this.preset.image = '';
           this._emit();
           this.setPreset(this.preset);
@@ -388,7 +396,7 @@ export const ShaderEditor = GObject.registerClass(
       );
       box.append(row);
       const sample = new Gtk.Button({
-        label: 'Use Sample',
+        label: _('Use Sample'),
         css_classes: ['flat'],
       });
       sample.connect('clicked', () => {

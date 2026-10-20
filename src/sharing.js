@@ -1,3 +1,4 @@
+import { _, format } from './translation.js';
 import { SHADERS, paperParams } from './catalog.js';
 
 export function exportSettings(preset) {
@@ -25,7 +26,9 @@ export function paperCode(preset, { width, height }) {
 export function parseSettings(input) {
   if (typeof input !== 'string' || input.length > 128_000)
     throw new Error(
-      'Paste a Paper code snippet or a Wallshader settings file smaller than 128 KB.',
+      _(
+        'Paste a Paper code snippet or a Wallshader settings file smaller than 128 KB.',
+      ),
     );
   const source = input.trim();
   let shader;
@@ -35,12 +38,14 @@ export function parseSettings(input) {
     shader = data.shader;
     params = data.params;
     if (data.format !== 'wallshader-paper' || data.version !== 1)
-      throw new Error('This is not a supported Wallshader settings file.');
+      throw new Error(_('This is not a supported Wallshader settings file.'));
   } else {
     const component = /<(\w+)\s+([\s\S]*?)\s*\/>/.exec(source);
     if (!component)
       throw new Error(
-        'Paste the complete self-closing shader component from Paper’s Code section.',
+        _(
+          'Paste the complete self-closing shader component from Paper’s Code section.',
+        ),
       );
     shader = Object.keys(SHADERS).find(
       (key) =>
@@ -54,7 +59,9 @@ export function parseSettings(input) {
       const match = attribute.exec(remaining);
       if (!match)
         throw new Error(
-          'Only literal shader values are supported; JavaScript expressions are never executed.',
+          _(
+            'Only literal shader values are supported; JavaScript expressions are never executed.',
+          ),
         );
       let value = match[2];
       if (value === undefined) {
@@ -63,7 +70,11 @@ export function parseSettings(input) {
             (field) => field.key === match[1] && field.type === 'boolean',
           )
         )
-          throw new Error(`Provide a literal value for ${match[1]}.`);
+          throw new Error(
+            format(_('Provide a literal value for {property}.'), {
+              property: match[1],
+            }),
+          );
         params[match[1]] = true;
         remaining = remaining.slice(match[0].length);
         continue;
@@ -76,7 +87,12 @@ export function parseSettings(input) {
           params[match[1]] = JSON.parse(value);
         } catch {
           throw new Error(
-            `Use a literal number, color, boolean, or JSON array for ${match[1]}.`,
+            format(
+              _(
+                'Use a literal number, color, boolean, or JSON array for {property}.',
+              ),
+              { property: match[1] },
+            ),
           );
         }
       }
@@ -89,14 +105,18 @@ export function parseSettings(input) {
     Array.isArray(params) ||
     typeof params !== 'object'
   )
-    throw new Error('The settings do not identify a supported Paper shader.');
+    throw new Error(
+      _('The settings do not identify a supported Paper shader.'),
+    );
   if (
     params.image &&
     !['sample', ''].includes(params.image) &&
     !params.image.startsWith?.('file:///')
   )
     throw new Error(
-      'This snippet uses an external image. Remove its image property, then choose a local image in Wallshader.',
+      _(
+        'This snippet uses an external image. Remove its image property, then choose a local image in Wallshader.',
+      ),
     );
   return { shader, params };
 }

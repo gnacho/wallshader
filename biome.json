@@ -8,7 +8,8 @@
       "!!artifacts",
       "!!dist",
       "!!data/third-party",
-      "!!data/style.css"
+      "!!data/style.css",
+      "!!po/paper-catalog.js"
     ]
   },
   "formatter": { "indentStyle": "space", "indentWidth": 2 },

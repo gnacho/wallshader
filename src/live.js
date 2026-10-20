@@ -1,3 +1,4 @@
+import { _ } from './i18n.js';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import { ROOT } from './paths.js';
@@ -52,7 +53,9 @@ function copyDirectory(source, destination) {
         input.copy(output, Gio.FileCopyFlags.NONE, null, null);
       else
         throw new Error(
-          'The extension bundle contains an unsupported file. Rebuild Wallshader.',
+          _(
+            'The extension bundle contains an unsupported file. Rebuild Wallshader.',
+          ),
         );
     }
   } finally {
@@ -63,7 +66,9 @@ function copyDirectory(source, destination) {
 export class LoginRequiredError extends Error {
   constructor() {
     super(
-      'Animation support is installed. Log out and back in once so GNOME can discover it. Then open Wallshader and choose “Set Animated Wallpaper” again.',
+      _(
+        'Animation support is installed. Log out and back in once so GNOME can discover it. Then open Wallshader and choose “Set Animated Wallpaper” again.',
+      ),
     );
     this.name = 'LoginRequiredError';
   }
@@ -114,7 +119,7 @@ export class LiveWallpaper {
     const shellVersion = version.deepUnpack?.() ?? version;
     if (!shellVersion.startsWith('50.'))
       throw new Error(
-        'Animated wallpapers currently support GNOME 50 on Wayland.',
+        _('Animated wallpapers currently support GNOME 50 on Wayland.'),
       );
     const directory = Gio.File.new_for_path(
       GLib.build_filenamev([
@@ -133,7 +138,9 @@ export class LiveWallpaper {
         .find((file) => file.get_child('app').query_exists(null));
       if (!bundle)
         throw new Error(
-          'Build Wallshader with “bun run build” to include animated wallpaper support.',
+          _(
+            'Build Wallshader with “bun run build” to include animated wallpaper support.',
+          ),
         );
       const staging = directory.get_child(
         `.wallshader-${GLib.uuid_string_random()}`,
@@ -169,7 +176,9 @@ export class LiveWallpaper {
       );
     }
     throw new Error(
-      'Enable Wallshader Live Wallpaper in GNOME Extensions, then try again.',
+      _(
+        'Enable Wallshader Live Wallpaper in GNOME Extensions, then try again.',
+      ),
     );
   }
 

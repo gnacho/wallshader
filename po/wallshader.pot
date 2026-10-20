@@ -1,0 +1,3247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Wallshader contributors
+# This file is distributed under the same license as the Wallshader package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Wallshader\n"
+"Report-Msgid-Bugs-To: https://github.com/stonega/wallshader/issues\n"
+"POT-Creation-Date: 2026-10-20 10:15+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: data/io.github.wallshader.Wallshader.desktop:2
+msgid "Wallshader"
+msgstr ""
+
+#: data/io.github.wallshader.Wallshader.desktop:3
+msgid "Make your desktop a little more colorful"
+msgstr ""
+
+#: data/io.github.wallshader.Wallshader.desktop:9
+msgid "Wallpaper;Background;Shader;Paper;Gradient;"
+msgstr ""
+
+#. Translators: Paper shader names, controls, descriptions, and enum labels.
+#: po/paper-catalog.js:5
+msgid "007"
+msgstr ""
+
+#: po/paper-catalog.js:6
+msgid "1960s"
+msgstr ""
+
+#: po/paper-catalog.js:7
+msgid "2x2"
+msgstr ""
+
+#: po/paper-catalog.js:8
+msgid "4x4"
+msgstr ""
+
+#: po/paper-catalog.js:9
+msgid "8x8"
+msgstr ""
+
+#: po/paper-catalog.js:10
+msgid "A set of irregular folding lines (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:11
+msgid "Abstract"
+msgstr ""
+
+#: po/paper-catalog.js:12
+msgid "Additional color inside the input shape, mixing with smoke (RGBA)"
+msgstr ""
+
+#: po/paper-catalog.js:13
+msgid ""
+"Additional distortion based on simplex noise, independent from caustic (0 to "
+"1)"
+msgstr ""
+
+#: po/paper-catalog.js:14
+msgid "Amount of image-to-paper blending, needs image (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:15
+msgid "Amplitude"
+msgstr ""
+
+#: po/paper-catalog.js:16
+msgid "Angle"
+msgstr ""
+
+#: po/paper-catalog.js:17
+msgid "Angle between every 2 panels (0.25 to 7)"
+msgstr ""
+
+#: po/paper-catalog.js:18
+msgid "Angle of the focal point in degrees, needs focalDistance > 0 (0 to 360)"
+msgstr ""
+
+#: po/paper-catalog.js:19
+msgid "Angle1"
+msgstr ""
+
+#: po/paper-catalog.js:20
+msgid "Angle2"
+msgstr ""
+
+#: po/paper-catalog.js:21
+msgid "Angular size of spots (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:22
+msgid "Aspect Ratio"
+msgstr ""
+
+#: po/paper-catalog.js:23
+msgid "Aspect ratio mode (0 = auto, 1 = square)"
+msgstr ""
+
+#: po/paper-catalog.js:24
+msgid "B-channel dispersion (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:25
+msgid "Backdrop"
+msgstr ""
+
+#: po/paper-catalog.js:26
+msgid "Background"
+msgstr ""
+
+#: po/paper-catalog.js:27
+msgid "Background (paper) color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:28
+msgid "Background color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:29
+msgid "Background color in RGBA, needs originalColors off"
+msgstr ""
+
+#: po/paper-catalog.js:30
+msgid ""
+"Balance of the dispersion between a soft circular zone at the centre and the "
+"rest of the image; 0 applies it evenly, -1 keeps it in the centre only, 1 "
+"keeps it at the edges only, needs spread > 0, dispersion > 0 (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:31
+msgid "Band Count"
+msgstr ""
+
+#: po/paper-catalog.js:32
+msgid "Base pattern type (0 = checks, 1 = stripes, 2 = edge)"
+msgstr ""
+
+#: po/paper-catalog.js:33
+msgid "Base size of each shape in pixels (1 to 100)"
+msgstr ""
+
+#: po/paper-catalog.js:34
+msgid "Beach"
+msgstr ""
+
+#: po/paper-catalog.js:35
+msgid "Bias"
+msgstr ""
+
+#: po/paper-catalog.js:36
+msgid "Black ink color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:37
+msgid "Blend point between colors, 0.5 = equal distribution (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:38
+msgid ""
+"Blend point between front and back colors, 0.5 = equal distribution (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:39
+msgid "Blend point between two colors, 0.5 = equal distribution (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:40
+msgid "Blending"
+msgstr ""
+
+#: po/paper-catalog.js:41
+msgid ""
+"Blending behavior, 0 = hard stripes, 0.5 = smooth, 1 = gradual blend (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:42
+msgid "Blending behavior, 0 = hard stripes, 1 = smooth gradient (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:43
+msgid "Blob"
+msgstr ""
+
+#: po/paper-catalog.js:44
+msgid "Bloodstream"
+msgstr ""
+
+#: po/paper-catalog.js:45
+msgid "Bloom"
+msgstr ""
+
+#: po/paper-catalog.js:46
+msgid "Blur"
+msgstr ""
+
+#: po/paper-catalog.js:47
+msgid "Border base width (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:48
+msgid "Border edge sharpness, 0 = hard edge, 1 = smooth gradient (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:49
+msgid "Border radius (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:50
+msgid "Brightness"
+msgstr ""
+
+#: po/paper-catalog.js:51
+msgid "Brightness/intensity of the central glow, needs midSize > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:52
+msgid "Bubblegum"
+msgstr ""
+
+#: po/paper-catalog.js:53
+msgid "Bubbles"
+msgstr ""
+
+#: po/paper-catalog.js:54
+msgid "Bugs"
+msgstr ""
+
+#: po/paper-catalog.js:55
+msgid "Candy"
+msgstr ""
+
+#: po/paper-catalog.js:56
+msgid "Cauldron Pot"
+msgstr ""
+
+#: po/paper-catalog.js:57
+msgid "Caustic"
+msgstr ""
+
+#: po/paper-catalog.js:58
+msgid ""
+"Caustic distortion power on the image edges, needs image and caustic > 0 (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:59
+msgid "Cells"
+msgstr ""
+
+#: po/paper-catalog.js:60
+msgid "Center"
+msgstr ""
+
+#: po/paper-catalog.js:61
+msgid "Circle"
+msgstr ""
+
+#: po/paper-catalog.js:62
+msgid "Clip"
+msgstr ""
+
+#: po/paper-catalog.js:63
+msgid "Cloud"
+msgstr ""
+
+#: po/paper-catalog.js:64
+msgid "Color Back"
+msgstr ""
+
+#: po/paper-catalog.js:65
+msgid "Color Bloom"
+msgstr ""
+
+#: po/paper-catalog.js:66
+msgid "Color C"
+msgstr ""
+
+#: po/paper-catalog.js:67
+msgid "Color Fill"
+msgstr ""
+
+#: po/paper-catalog.js:68
+msgid "Color Front"
+msgstr ""
+
+#: po/paper-catalog.js:69
+msgid "Color Gap"
+msgstr ""
+
+#: po/paper-catalog.js:70
+msgid "Color Glow"
+msgstr ""
+
+#: po/paper-catalog.js:71
+msgid "Color Highlight"
+msgstr ""
+
+#: po/paper-catalog.js:72
+msgid "Color Inner"
+msgstr ""
+
+#: po/paper-catalog.js:73
+msgid "Color K"
+msgstr ""
+
+#: po/paper-catalog.js:74
+msgid "Color M"
+msgstr ""
+
+#: po/paper-catalog.js:75
+msgid "Color Mid"
+msgstr ""
+
+#: po/paper-catalog.js:76
+msgid "Color Panels"
+msgstr ""
+
+#: po/paper-catalog.js:77
+msgid "Color Paper"
+msgstr ""
+
+#: po/paper-catalog.js:78
+msgid "Color Shadow"
+msgstr ""
+
+#: po/paper-catalog.js:79
+msgid "Color Steps"
+msgstr ""
+
+#: po/paper-catalog.js:80
+msgid "Color Stroke"
+msgstr ""
+
+#: po/paper-catalog.js:81
+msgid "Color Tint"
+msgstr ""
+
+#: po/paper-catalog.js:82
+msgid "Color Y"
+msgstr ""
+
+#: po/paper-catalog.js:83
+msgid "Color behind the paper sheet in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:84
+msgid ""
+"Color gradient added over image and background, following distortion shape, "
+"needs colorShadow alpha > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:85
+msgid "Color highlight on the panels edges"
+msgstr ""
+
+#: po/paper-catalog.js:86
+msgid ""
+"Color mixing within a panel, 0 = solid, 1 = gradient, needs 2+ colors (0 to "
+"1)"
+msgstr ""
+
+#: po/paper-catalog.js:87
+msgid "Color of the paper sheet in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:88
+msgid "Color of the patterns over the paper sheet in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:89
+msgid "Color overlay blended with the rays in RGBA, needs bloom > 0"
+msgstr ""
+
+#: po/paper-catalog.js:90
+msgid "Color spots placement seed (0 to 100)"
+msgstr ""
+
+#: po/paper-catalog.js:91
+msgid "Color tint for radial inner shadow inside cells in RGBA, needs glow > 0"
+msgstr ""
+
+#: po/paper-catalog.js:92
+msgid "Color transition sharpness, 0 = hard edge, 1 = smooth gradient (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:93
+msgid ""
+"Color transition sharpness, 0 = hard edge, 1 = smooth gradient, needs 2+ "
+"colors (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:94
+msgid "Color used for cell borders/gaps in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:95
+msgid ""
+"Coloring added over image/background following caustic shape, needs "
+"colorHighlight alpha > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:96 src/catalog.js:59
+msgid "Contour"
+msgstr ""
+
+#: po/paper-catalog.js:97
+msgid "Contrast"
+msgstr ""
+
+#: po/paper-catalog.js:98
+msgid ""
+"Contrast applied to the sampled image, at 0 the luminance is flat so all the "
+"dots get equal size (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:99
+msgid "Count"
+msgstr ""
+
+#: po/paper-catalog.js:100
+msgid "Creased"
+msgstr ""
+
+#: po/paper-catalog.js:101
+msgid "Cross Section"
+msgstr ""
+
+#: po/paper-catalog.js:102
+msgid "Crumple Count"
+msgstr ""
+
+#: po/paper-catalog.js:103
+msgid "Crumple-like facets repeating across the surface (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:104
+msgid "Crumples"
+msgstr ""
+
+#: po/paper-catalog.js:105
+msgid "Curly thread-like noise covering the surface evenly (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:106
+msgid "Cuts the paper sheet to the image frame, needs image"
+msgstr ""
+
+#: po/paper-catalog.js:107
+msgid "Cyan ink color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:108
+msgid "Default"
+msgstr ""
+
+#: po/paper-catalog.js:109
+msgid "Density"
+msgstr ""
+
+#: po/paper-catalog.js:110
+msgid "Density of pattern stripes (1 to 10)"
+msgstr ""
+
+#: po/paper-catalog.js:111
+msgid "Direction of pattern animation in degrees (0 to 360)"
+msgstr ""
+
+#: po/paper-catalog.js:112
+msgid "Direction of the grid relative to the image in degrees (0 to 180)"
+msgstr ""
+
+#: po/paper-catalog.js:113
+msgid ""
+"Direction of the heatwaves in degrees, needs innerGlow or outerGlow > 0 (0 "
+"to 360)"
+msgstr ""
+
+#: po/paper-catalog.js:114
+msgid ""
+"Direction of the spread in degrees, needs spread > 0, perspective < 1 (0 to "
+"360)"
+msgstr ""
+
+#: po/paper-catalog.js:115
+msgid ""
+"Direction the surface is lit from in degrees, also the roughness rows "
+"direction, needs crumples, wrinkles, folds, roughnessRows or drops > 0 (0 to "
+"360)"
+msgstr ""
+
+#: po/paper-catalog.js:116
+msgid "Dispersion"
+msgstr ""
+
+#: po/paper-catalog.js:117
+msgid "Dispersion Color"
+msgstr ""
+
+#: po/paper-catalog.js:118
+msgid "Dispersion Shift"
+msgstr ""
+
+#: po/paper-catalog.js:119
+msgid "Distance from the bottom edge to the effect (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:120
+msgid "Distance from the left edge to the effect (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:121
+msgid "Distance from the right edge to the effect (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:122
+msgid "Distance from the top edge to the effect (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:123
+msgid "Distance of the focal point from center (0 to 3)"
+msgstr ""
+
+#: po/paper-catalog.js:124
+msgid "Distortion"
+msgstr ""
+
+#: po/paper-catalog.js:125
+msgid "Distortion Freq"
+msgstr ""
+
+#: po/paper-catalog.js:126
+msgid "Distortion Shape"
+msgstr ""
+
+#: po/paper-catalog.js:127
+msgid "Distortion Shift"
+msgstr ""
+
+#: po/paper-catalog.js:128
+msgid "Distortion between color bands (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:129
+msgid "Dithering"
+msgstr ""
+
+#: po/paper-catalog.js:130
+msgid ""
+"Dithering type (1 = random, 2 = 2x2 Bayer, 3 = 4x4 Bayer, 4 = 8x8 Bayer)"
+msgstr ""
+
+#: po/paper-catalog.js:131
+msgid "Dot Grid"
+msgstr ""
+
+#: po/paper-catalog.js:132
+msgid "Dot Orbit"
+msgstr ""
+
+#: po/paper-catalog.js:133
+msgid "Dot radius relative to cell size (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:134
+msgid "Dot shape style (0 = dots, 1 = ink, 2 = sharp)"
+msgstr ""
+
+#: po/paper-catalog.js:135
+msgid "Dot style (0 = classic, 1 = gooey, 2 = holes, 3 = soft)"
+msgstr ""
+
+#: po/paper-catalog.js:136
+msgid "Dots"
+msgstr ""
+
+#: po/paper-catalog.js:137
+msgid "Droplet"
+msgstr ""
+
+#: po/paper-catalog.js:138
+msgid "Drops"
+msgstr ""
+
+#: po/paper-catalog.js:139
+msgid "Duotone"
+msgstr ""
+
+#: po/paper-catalog.js:140
+msgid "Edge softness of dots (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:141
+msgid "Edges"
+msgstr ""
+
+#: po/paper-catalog.js:142 src/window.js:294
+msgid "Effects"
+msgstr ""
+
+#: po/paper-catalog.js:143
+msgid "Ether"
+msgstr ""
+
+#: po/paper-catalog.js:144
+msgid "Extra distortion along the grid lines (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:145
+msgid "Extra stroke width at the center, needs strokeWidth ≠ 0.5 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:146
+msgid "Fade In"
+msgstr ""
+
+#: po/paper-catalog.js:147
+msgid "Fade Out"
+msgstr ""
+
+#: po/paper-catalog.js:148
+msgid "Falloff"
+msgstr ""
+
+#: po/paper-catalog.js:149
+msgid "Fiber"
+msgstr ""
+
+#: po/paper-catalog.js:150
+msgid "Fiber Size"
+msgstr ""
+
+#: po/paper-catalog.js:151
+msgid "Fine grain covering the surface evenly (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:152
+msgid "Fire"
+msgstr ""
+
+#: po/paper-catalog.js:153
+msgid "First contact"
+msgstr ""
+
+#: po/paper-catalog.js:154
+msgid "Fisheye"
+msgstr ""
+
+#: po/paper-catalog.js:155
+msgid "Flat"
+msgstr ""
+
+#: po/paper-catalog.js:156
+msgid ""
+"Flat black dot size adjustment applied uniformly, needs colorK alpha > 0 (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:157
+msgid ""
+"Flat cyan dot size adjustment applied uniformly, needs colorC alpha > 0 (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:158
+msgid ""
+"Flat magenta dot size adjustment applied uniformly, needs colorM alpha > 0 "
+"(0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:159
+msgid ""
+"Flat yellow dot size adjustment applied uniformly, needs colorY alpha > 0 (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:160
+msgid "Flood C"
+msgstr ""
+
+#: po/paper-catalog.js:161
+msgid "Flood K"
+msgstr ""
+
+#: po/paper-catalog.js:162
+msgid "Flood M"
+msgstr ""
+
+#: po/paper-catalog.js:163
+msgid "Flood Y"
+msgstr ""
+
+#: po/paper-catalog.js:164
+msgid "Fluorescent"
+msgstr ""
+
+#: po/paper-catalog.js:165
+msgid "Fluted Glass"
+msgstr ""
+
+#: po/paper-catalog.js:166
+msgid "Focal Angle"
+msgstr ""
+
+#: po/paper-catalog.js:167
+msgid "Focal Distance"
+msgstr ""
+
+#: po/paper-catalog.js:168
+msgid "Focus Center"
+msgstr ""
+
+#: po/paper-catalog.js:169
+msgid "Focus Edges"
+msgstr ""
+
+#: po/paper-catalog.js:170
+msgid "Fold Offset X"
+msgstr ""
+
+#: po/paper-catalog.js:171
+msgid "Fold Offset Y"
+msgstr ""
+
+#: po/paper-catalog.js:172
+msgid "Fold Size X"
+msgstr ""
+
+#: po/paper-catalog.js:173
+msgid "Fold Size Y"
+msgstr ""
+
+#: po/paper-catalog.js:174
+msgid "Folds"
+msgstr ""
+
+#: po/paper-catalog.js:175
+msgid "Foreground (ink) color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:176
+msgid "Foreground color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:177
+msgid "Foreground color in RGBA, needs originalColors off"
+msgstr ""
+
+#: po/paper-catalog.js:178
+msgid "Frequency"
+msgstr ""
+
+#: po/paper-catalog.js:179
+msgid ""
+"Frequency of the noise, 0 to 1 mapped internally to 0 to 18; higher is "
+"finer, needs spread > 0, noise > 0"
+msgstr ""
+
+#: po/paper-catalog.js:180
+msgid ""
+"Frequency step, defines how compressed the pattern is, needs octaveCount > 1 "
+"(1.5 to 10)"
+msgstr ""
+
+#: po/paper-catalog.js:181
+msgid "Gain C"
+msgstr ""
+
+#: po/paper-catalog.js:182
+msgid "Gain K"
+msgstr ""
+
+#: po/paper-catalog.js:183
+msgid "Gain M"
+msgstr ""
+
+#: po/paper-catalog.js:184
+msgid "Gain Y"
+msgstr ""
+
+#: po/paper-catalog.js:185
+msgid "Gap"
+msgstr ""
+
+#: po/paper-catalog.js:186
+msgid "Gap X"
+msgstr ""
+
+#: po/paper-catalog.js:187
+msgid "Gap Y"
+msgstr ""
+
+#: po/paper-catalog.js:188
+msgid "Gem Smoke"
+msgstr ""
+
+#: po/paper-catalog.js:189
+msgid "Ghost"
+msgstr ""
+
+#: po/paper-catalog.js:190
+msgid "Glass"
+msgstr ""
+
+#: po/paper-catalog.js:191
+msgid "Glass distortion and softness on the image edges (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:192
+msgid "Glow"
+msgstr ""
+
+#: po/paper-catalog.js:193
+msgid "God Rays"
+msgstr ""
+
+#: po/paper-catalog.js:194
+msgid "Gradient"
+msgstr ""
+
+#: po/paper-catalog.js:195
+msgid "Gradient decay, 0 = equal color distribution (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:196
+msgid "Grain Gradient"
+msgstr ""
+
+#: po/paper-catalog.js:197
+msgid "Grain Mixer"
+msgstr ""
+
+#: po/paper-catalog.js:198
+msgid "Grain Overlay"
+msgstr ""
+
+#: po/paper-catalog.js:199
+msgid "Grain Size"
+msgstr ""
+
+#: po/paper-catalog.js:200
+msgid "Grain applied across the entire graphic (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:201
+msgid "Grainy noise overlay (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:202
+msgid "Graphics highlight color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:203
+msgid "Graphics main color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:204
+msgid "Grid"
+msgstr ""
+
+#: po/paper-catalog.js:205
+msgid "Grid Noise"
+msgstr ""
+
+#: po/paper-catalog.js:206
+msgid ""
+"Grid shape (1 = lines, 2 = linesIrregular, 3 = wave, 4 = zigzag, 5 = pattern)"
+msgstr ""
+
+#: po/paper-catalog.js:207
+msgid "Grid size relative to the image box (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:208
+msgid "Grid type (0 = square, 1 = hex)"
+msgstr ""
+
+#: po/paper-catalog.js:209
+msgid "Groovy"
+msgstr ""
+
+#: po/paper-catalog.js:210
+msgid "Halftone CMYK"
+msgstr ""
+
+#: po/paper-catalog.js:211
+msgid "Halftone Dots"
+msgstr ""
+
+#: po/paper-catalog.js:212
+msgid "Halftone cell size (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:213
+msgid "Hallucinatory"
+msgstr ""
+
+#: po/paper-catalog.js:214
+msgid "Heat intensity near the edges of the input shape (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:215
+msgid "Heatmap"
+msgstr ""
+
+#: po/paper-catalog.js:216
+msgid "Highlight color in RGBA, needs highlights > 0"
+msgstr ""
+
+#: po/paper-catalog.js:217
+msgid "Highlights"
+msgstr ""
+
+#: po/paper-catalog.js:218
+msgid "Highlights color in RGBA, needs highlights > 0"
+msgstr ""
+
+#: po/paper-catalog.js:219
+msgid ""
+"How far from the center the swirl colors begin to appear, needs twist > 0 (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:220
+msgid ""
+"How much stroke loses width away from center, 0 = full visibility (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:221
+msgid "How much the image bends with the paper surface, needs image (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:222
+msgid "Image Dithering"
+msgstr ""
+
+#: po/paper-catalog.js:223 src/window.js:295
+msgid "Image Filters"
+msgstr ""
+
+#: po/paper-catalog.js:224
+msgid "Image X"
+msgstr ""
+
+#: po/paper-catalog.js:225
+msgid "Image Y"
+msgstr ""
+
+#: po/paper-catalog.js:226
+msgid "Image contrast adjustment (0 to 2)"
+msgstr ""
+
+#: po/paper-catalog.js:227
+msgid "Infrared"
+msgstr ""
+
+#: po/paper-catalog.js:228
+msgid "Ink"
+msgstr ""
+
+#: po/paper-catalog.js:229
+msgid "Ink Drops"
+msgstr ""
+
+#: po/paper-catalog.js:230
+msgid "Inner Distortion"
+msgstr ""
+
+#: po/paper-catalog.js:231
+msgid "Inner Glow"
+msgstr ""
+
+#: po/paper-catalog.js:232
+msgid "Inner Shape"
+msgstr ""
+
+#: po/paper-catalog.js:233
+msgid "Intensity"
+msgstr ""
+
+#: po/paper-catalog.js:234
+msgid "Inverted"
+msgstr ""
+
+#: po/paper-catalog.js:235
+msgid "Inverts the image luminance, doesn't affect the color scheme"
+msgstr ""
+
+#: po/paper-catalog.js:236
+msgid ""
+"Inverts the image luminance, doesn't affect the color scheme, needs contrast "
+"> 0"
+msgstr ""
+
+#: po/paper-catalog.js:237
+msgid "Jungle"
+msgstr ""
+
+#: po/paper-catalog.js:238
+msgid "Kelp"
+msgstr ""
+
+#: po/paper-catalog.js:239
+msgid "LED screen"
+msgstr ""
+
+#: po/paper-catalog.js:240
+msgid "Lacunarity"
+msgstr ""
+
+#: po/paper-catalog.js:241
+msgid "Layering"
+msgstr ""
+
+#: po/paper-catalog.js:242
+msgid "Length"
+msgstr ""
+
+#: po/paper-catalog.js:243
+msgid "Lens Bulge"
+msgstr ""
+
+#: po/paper-catalog.js:244
+msgid "Lens Circle"
+msgstr ""
+
+#: po/paper-catalog.js:245
+msgid "Lens Distortion"
+msgstr ""
+
+#: po/paper-catalog.js:246
+msgid "Lights"
+msgstr ""
+
+#: po/paper-catalog.js:247
+msgid "Line"
+msgstr ""
+
+#: po/paper-catalog.js:248
+msgid ""
+"Line shape, 0 = zigzag, 1 = sine, 2-3 = irregular waves, fractional values "
+"morph between shapes, needs amplitude > 0, frequency > 0 (0 to 3)"
+msgstr ""
+
+#: po/paper-catalog.js:249
+msgid "Linear"
+msgstr ""
+
+#: po/paper-catalog.js:250
+msgid ""
+"Lines the roughness up into stripes, 0 = even scatter, 1 = laid-paper rows, "
+"needs roughness > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:251
+msgid "Liquid Metal"
+msgstr ""
+
+#: po/paper-catalog.js:252
+msgid "Live Ink"
+msgstr ""
+
+#: po/paper-catalog.js:253
+msgid "Lo-Fi"
+msgstr ""
+
+#: po/paper-catalog.js:254 src/window.js:296
+msgid "Logo Animations"
+msgstr ""
+
+#: po/paper-catalog.js:255
+msgid "Luminosity of the crossing points (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:256
+msgid "Magenta ink color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:257
+msgid "Margin Bottom"
+msgstr ""
+
+#: po/paper-catalog.js:258
+msgid "Margin Left"
+msgstr ""
+
+#: po/paper-catalog.js:259
+msgid "Margin Right"
+msgstr ""
+
+#: po/paper-catalog.js:260
+msgid "Margin Top"
+msgstr ""
+
+#: po/paper-catalog.js:261
+msgid "Maximum dot size relative to grid cell (0 to 2)"
+msgstr ""
+
+#: po/paper-catalog.js:262
+msgid ""
+"Maximum orbit distance around cell center, dots are static at 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:263
+msgid "Mesh Gradient"
+msgstr ""
+
+#: po/paper-catalog.js:264
+msgid "Metaballs"
+msgstr ""
+
+#: po/paper-catalog.js:265
+msgid "Mid Intensity"
+msgstr ""
+
+#: po/paper-catalog.js:266
+msgid "Mid Size"
+msgstr ""
+
+#: po/paper-catalog.js:267
+msgid "Mixing"
+msgstr ""
+
+#: po/paper-catalog.js:268
+msgid "Mosaic"
+msgstr ""
+
+#: po/paper-catalog.js:269 src/catalog.js:51
+msgid "Moss"
+msgstr ""
+
+#: po/paper-catalog.js:270
+msgid "Natural"
+msgstr ""
+
+#: po/paper-catalog.js:271
+msgid "Nectar"
+msgstr ""
+
+#: po/paper-catalog.js:272
+msgid "Neuro Noise"
+msgstr ""
+
+#: po/paper-catalog.js:273
+msgid "Newspaper"
+msgstr ""
+
+#: po/paper-catalog.js:274
+msgid "Nintendo Water"
+msgstr ""
+
+#: po/paper-catalog.js:275
+msgid "Noir"
+msgstr ""
+
+#: po/paper-catalog.js:276
+msgid "Noise"
+msgstr ""
+
+#: po/paper-catalog.js:277
+msgid "Noise Frequency"
+msgstr ""
+
+#: po/paper-catalog.js:278
+msgid "Noise Iterations"
+msgstr ""
+
+#: po/paper-catalog.js:279
+msgid "Noise Offset"
+msgstr ""
+
+#: po/paper-catalog.js:280
+msgid "Noise Scale"
+msgstr ""
+
+#: po/paper-catalog.js:281
+msgid ""
+"Noise distortion applied over the canvas, needs noiseFrequency > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:282
+msgid "Noise distortion over the stripes pattern (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:283
+msgid "Noise frequency (0.01 to 5)"
+msgstr ""
+
+#: po/paper-catalog.js:284
+msgid "Noise frequency, needs noise > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:285
+msgid "Northern lights"
+msgstr ""
+
+#: po/paper-catalog.js:286
+msgid "Number of balls, fractional values shrink the last ball (1 to 20)"
+msgstr ""
+
+#: po/paper-catalog.js:287
+msgid "Number of color bands, 0 = concentric ripples (0 to 15)"
+msgstr ""
+
+#: po/paper-catalog.js:288
+msgid "Number of colors to use, applies to both color modes (1 to 7)"
+msgstr ""
+
+#: po/paper-catalog.js:289
+msgid ""
+"Number of extra colors between base colors, 1 = N colors, 2 = 2×N, etc., "
+"needs 2+ colors (1 to 10)"
+msgstr ""
+
+#: po/paper-catalog.js:290
+msgid ""
+"Number of extra colors between base colors, 1 = N colors, 2 = 2×N, etc., "
+"needs 2+ colors (1 to 3)"
+msgstr ""
+
+#: po/paper-catalog.js:291
+msgid ""
+"Number of extra colors between base colors, 1 = N colors, 2 = 2×N, etc., "
+"needs 2+ colors (1 to 4)"
+msgstr ""
+
+#: po/paper-catalog.js:292
+msgid "Number of facets in the crumple field, needs crumples > 0 (2 to 15)"
+msgstr ""
+
+#: po/paper-catalog.js:293
+msgid "Number of layered swirl passes as an integer, needs swirl > 0 (2 to 20)"
+msgstr ""
+
+#: po/paper-catalog.js:294
+msgid "Number of noise layers, more layers gives more details (1 to 8)"
+msgstr ""
+
+#: po/paper-catalog.js:295
+msgid ""
+"Number of sampled color layers along the spread; higher is smoother and "
+"costlier, needs spread > 0 (2 to 50)"
+msgstr ""
+
+#: po/paper-catalog.js:296
+msgid "Number of spots added for each color (1 to 4)"
+msgstr ""
+
+#: po/paper-catalog.js:297
+msgid "Octave Count"
+msgstr ""
+
+#: po/paper-catalog.js:298
+msgid "Offset"
+msgstr ""
+
+#: po/paper-catalog.js:299
+msgid ""
+"Offsets the noise pattern for a different seed, 0 to 1 mapped internally to "
+"0 to 30, needs spread > 0, noise > 0"
+msgstr ""
+
+#: po/paper-catalog.js:300
+msgid ""
+"One-directional blur over the image and extra blur around edges (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:301
+msgid "Opacity Range"
+msgstr ""
+
+#: po/paper-catalog.js:302
+msgid "Opening"
+msgstr ""
+
+#: po/paper-catalog.js:303
+msgid "Optional noisy shape extending the border (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:304
+msgid "Optional pulsing animation intensity (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:305
+msgid "Original Colors"
+msgstr ""
+
+#: po/paper-catalog.js:306
+msgid "Outer Distortion"
+msgstr ""
+
+#: po/paper-catalog.js:307
+msgid "Outer Glow"
+msgstr ""
+
+#: po/paper-catalog.js:308
+msgid "Outline stroke width in pixels, needs colorStroke alpha > 0 (0 to 50)"
+msgstr ""
+
+#: po/paper-catalog.js:309
+msgid ""
+"Overall amount of color dispersion; 1 gives each layer its own color from "
+"the spectrum, 0 keeps the original image color, needs spread > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:310
+msgid "Overlay color in RGBA (color burn blending used)"
+msgstr ""
+
+#: po/paper-catalog.js:311
+msgid "Panel length relative to total height (0 to 3)"
+msgstr ""
+
+#: po/paper-catalog.js:312
+msgid "Pans the image horizontally behind the effect; 0 is centred (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:313
+msgid "Pans the image vertically behind the effect; 0 is centred (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:314
+msgid "Paper Texture"
+msgstr ""
+
+#: po/paper-catalog.js:315
+msgid "Passion"
+msgstr ""
+
+#: po/paper-catalog.js:316
+msgid "Pattern horizontal spacing in pixels (2 to 500)"
+msgstr ""
+
+#: po/paper-catalog.js:317
+msgid "Pattern scale relative to the image (0.01 to 7)"
+msgstr ""
+
+#: po/paper-catalog.js:318
+msgid "Pattern vertical spacing in pixels (2 to 500)"
+msgstr ""
+
+#: po/paper-catalog.js:319
+msgid "Perlin Noise"
+msgstr ""
+
+#: po/paper-catalog.js:320
+msgid ""
+"Perlin noise octaves number, more octaves for more detailed patterns (1 to 8)"
+msgstr ""
+
+#: po/paper-catalog.js:321
+msgid "Persistence"
+msgstr ""
+
+#: po/paper-catalog.js:322
+msgid "Perspective"
+msgstr ""
+
+#: po/paper-catalog.js:323
+msgid "Phase offset applied to the X-axis wave, needs waveX > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:324
+msgid "Phase offset applied to the Y-axis wave, needs waveY > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:325
+msgid "Pixel size of dithering grid (0.5 to 20)"
+msgstr ""
+
+#: po/paper-catalog.js:326
+msgid "Positions"
+msgstr ""
+
+#: po/paper-catalog.js:327
+msgid "Post-processing black/white grain overlay (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:328
+msgid ""
+"Power of 2nd layer of caustic distortion, needs caustic or highlights > 0 (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:329
+msgid "Power of caustic distortion, needs image (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:330
+msgid "Power of distortion applied within each stripe (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:331
+msgid "Power of glow, 0 = normal blending, 1 = additive blending (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:332
+msgid "Power of organic noise distortion (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:333
+msgid "Power of shape distortion applied along the spiral (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:334
+msgid ""
+"Power of smoke distortion inside the input shape, needs innerGlow > 0 (0 to "
+"1)"
+msgstr ""
+
+#: po/paper-catalog.js:335
+msgid ""
+"Power of smoke distortion outside the input shape, needs outerGlow > 0 (0 to "
+"1)"
+msgstr ""
+
+#: po/paper-catalog.js:336
+msgid "Power of vortex distortion (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:337
+msgid ""
+"Predefined shape mask, needs no image (0 = none, 1 = circle, 2 = daisy, 3 = "
+"diamond, 4 = metaballs)"
+msgstr ""
+
+#: po/paper-catalog.js:338
+msgid "Proportion"
+msgstr ""
+
+#: po/paper-catalog.js:339
+msgid ""
+"Proportional black dot size gain, needs colorK alpha > 0 (enhances existing "
+"dots, -1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:340
+msgid ""
+"Proportional cyan dot size gain, needs colorC alpha > 0 (enhances existing "
+"dots, -1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:341
+msgid ""
+"Proportional magenta dot size gain, needs colorM alpha > 0 (enhances "
+"existing dots, -1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:342
+msgid ""
+"Proportional yellow dot size gain, needs colorY alpha > 0 (enhances existing "
+"dots, -1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:343
+msgid "Pulse"
+msgstr ""
+
+#: po/paper-catalog.js:344
+msgid "Pulsing Border"
+msgstr ""
+
+#: po/paper-catalog.js:345
+msgid "Purple"
+msgstr ""
+
+#: po/paper-catalog.js:346
+msgid "R-channel dispersion (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:347
+msgid "Radial"
+msgstr ""
+
+#: po/paper-catalog.js:348
+msgid "Radial distortion frequency, needs distortion > 0 (0 to 20)"
+msgstr ""
+
+#: po/paper-catalog.js:349
+msgid "Radial distortion offset, needs distortion > 0 (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:350
+msgid ""
+"Radial lens warp of the image geometry; positive bulges out like a fisheye/"
+"barrel, negative pinches in like a pincushion; strong positive values fade "
+"out the corners (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:351
+msgid "Radius"
+msgstr ""
+
+#: po/paper-catalog.js:352
+msgid "Radius of the ring shape (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:353
+msgid ""
+"Random variation in shape opacity, 0 = opaque, higher = semi-transparent (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:354
+msgid ""
+"Random variation in shape size, 0 = uniform, higher = random up to base size "
+"(0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:355
+msgid ""
+"Reduces the spread in a circular zone at the centre; 0 keeps it full to the "
+"centre, needs spread > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:356
+msgid ""
+"Reduces the spread toward the edges; 0 keeps it full to the edges, 1 "
+"restores the original image there, needs spread > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:357
+msgid "Repetition"
+msgstr ""
+
+#: po/paper-catalog.js:358
+msgid "Retro"
+msgstr ""
+
+#: po/paper-catalog.js:359
+msgid "Ride the wave"
+msgstr ""
+
+#: po/paper-catalog.js:360
+msgid "Ring inner fill amount, needs radius > 0 (0 to 4)"
+msgstr ""
+
+#: po/paper-catalog.js:361
+msgid "Ripple"
+msgstr ""
+
+#: po/paper-catalog.js:362
+msgid ""
+"Rotates the color layers around the centre by an angle growing along the "
+"spread; 0 is off, needs spread > 0 (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:363
+msgid ""
+"Rotates the colors around the hue wheel, 0 to 1 for a full turn, needs "
+"spread > 0, dispersion > 0"
+msgstr ""
+
+#: po/paper-catalog.js:364
+msgid "Roughness"
+msgstr ""
+
+#: po/paper-catalog.js:365
+msgid "Roughness Rows"
+msgstr ""
+
+#: po/paper-catalog.js:366
+msgid "Roughness Size"
+msgstr ""
+
+#: po/paper-catalog.js:367
+msgid "Roughness, falloff between octaves, needs octaveCount > 1 (0.3 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:368
+msgid "Round and square"
+msgstr ""
+
+#: po/paper-catalog.js:369
+msgid "Roundness"
+msgstr ""
+
+#: po/paper-catalog.js:370
+msgid ""
+"Scale applied to both grain distortion and grain overlay, needs grainMixer "
+"or grainOverlay > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:371
+msgid "Scale of the fiber noise, needs fiber > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:372
+msgid "Scale of the roughness grain, needs roughness > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:373
+msgid "Scale of the wrinkle facets, needs wrinkles > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:374
+msgid ""
+"Scatters the spread direction with noise; 0 is off, needs spread > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:375
+msgid ""
+"Scatters the spread with grain noise, breaking up the edges of the color "
+"layers, needs spread > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:376
+msgid "Sea"
+msgstr ""
+
+#: po/paper-catalog.js:377
+msgid ""
+"Secondary foreground color in RGBA (set same as colorFront for classic 2-"
+"color dithering), needs originalColors off"
+msgstr ""
+
+#: po/paper-catalog.js:378
+msgid "Seed"
+msgstr ""
+
+#: po/paper-catalog.js:379
+msgid "Seed applied to every pattern (0 to 1000)"
+msgstr ""
+
+#: po/paper-catalog.js:380
+msgid "Sensation"
+msgstr ""
+
+#: po/paper-catalog.js:381
+msgid "Sepia"
+msgstr ""
+
+#: po/paper-catalog.js:382
+msgid "Shadows"
+msgstr ""
+
+#: po/paper-catalog.js:383
+msgid "Shadows color in RGBA, needs shadows > 0"
+msgstr ""
+
+#: po/paper-catalog.js:384
+msgid "Shape"
+msgstr ""
+
+#: po/paper-catalog.js:385
+msgid "Shape Scale"
+msgstr ""
+
+#: po/paper-catalog.js:386
+msgid "Shape fill color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:387
+msgid ""
+"Shape of distortion (1 = prism, 2 = lens, 3 = contour, 4 = cascade, 5 = flat)"
+msgstr ""
+
+#: po/paper-catalog.js:388
+msgid ""
+"Shape pattern type (1 = simplex, 2 = warp, 3 = dots, 4 = wave, 5 = ripple, 6 "
+"= swirl, 7 = sphere)"
+msgstr ""
+
+#: po/paper-catalog.js:389
+msgid "Shape stroke color in RGBA, needs strokeWidth > 0"
+msgstr ""
+
+#: po/paper-catalog.js:390
+msgid "Shape type (0 = circle, 1 = diamond, 2 = square, 3 = triangle)"
+msgstr ""
+
+#: po/paper-catalog.js:391
+msgid ""
+"Shape type (1 = wave, 2 = dots, 3 = truchet, 4 = corners, 5 = ripple, 6 = "
+"blob, 7 = sphere)"
+msgstr ""
+
+#: po/paper-catalog.js:392
+msgid ""
+"Shapes the spread direction from a straight line (0) to a radial burst out "
+"from the centre (1), needs spread > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:393
+msgid "Sharpness of the transition between colorMid and colorBack (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:394
+msgid "Shift"
+msgstr ""
+
+#: po/paper-catalog.js:395
+msgid "Shift Blue"
+msgstr ""
+
+#: po/paper-catalog.js:396
+msgid "Shift Red"
+msgstr ""
+
+#: po/paper-catalog.js:397
+msgid ""
+"Shifts the colors toward one end of the spread; 0 spaces them evenly, needs "
+"spread > 0, count > 2 (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:398
+msgid ""
+"Shifts the horizontal folds across the surface, needs folds > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:399
+msgid "Shifts the vertical folds across the surface, needs folds > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:400
+msgid "Shine"
+msgstr ""
+
+#: po/paper-catalog.js:401
+msgid "Side blur, 0 for sharp edges (0 to 0.5)"
+msgstr ""
+
+#: po/paper-catalog.js:402
+msgid "Simplex Noise"
+msgstr ""
+
+#: po/paper-catalog.js:403
+msgid "Sine Wave"
+msgstr ""
+
+#: po/paper-catalog.js:404
+msgid "Size"
+msgstr ""
+
+#: po/paper-catalog.js:405
+msgid "Size Range"
+msgstr ""
+
+#: po/paper-catalog.js:406
+msgid ""
+"Size of grain texture, applied to both grain and overlay, needs grainMixer "
+"or grainOverlay > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:407
+msgid "Size of smoke shape relative to the image box (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:408
+msgid "Size of the balls (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:409
+msgid ""
+"Size of the circular glow shape in the center, needs midIntensity > 0 (0 to "
+"1)"
+msgstr ""
+
+#: po/paper-catalog.js:410
+msgid "Size of the distortion shape grid (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:411
+msgid "Size of the heated area inside the input shape (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:412
+msgid "Size of the heated area outside the input shape (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:413
+msgid "Size of the horizontal folds, needs folds > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:414
+msgid "Size of the shape (0 to 3)"
+msgstr ""
+
+#: po/paper-catalog.js:415
+msgid "Size of the smoke effect, needs smoke > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:416
+msgid "Size of the vertical folds, needs folds > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:417
+msgid "Skew angle applied to all panes (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:418
+msgid "Slow-mo"
+msgstr ""
+
+#: po/paper-catalog.js:419
+msgid "Smoke"
+msgstr ""
+
+#: po/paper-catalog.js:420
+msgid "Smoke Ring"
+msgstr ""
+
+#: po/paper-catalog.js:421
+msgid "Smoke Size"
+msgstr ""
+
+#: po/paper-catalog.js:422
+msgid "Smoke direction in degrees (0 to 360)"
+msgstr ""
+
+#: po/paper-catalog.js:423
+msgid "Softness"
+msgstr ""
+
+#: po/paper-catalog.js:424
+msgid "Solar"
+msgstr ""
+
+#: po/paper-catalog.js:425
+msgid "Solid line"
+msgstr ""
+
+#: po/paper-catalog.js:426
+msgid "Space between every two wavy lines (0 to 2)"
+msgstr ""
+
+#: po/paper-catalog.js:427
+msgid "Spacing"
+msgstr ""
+
+#: po/paper-catalog.js:428
+msgid "Spacing falloff simulating perspective, 0 = flat spiral (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:429
+msgid "Spiral"
+msgstr ""
+
+#: po/paper-catalog.js:430
+msgid "Spot Size"
+msgstr ""
+
+#: po/paper-catalog.js:431
+msgid "Spots"
+msgstr ""
+
+#: po/paper-catalog.js:432
+msgid "Spotty"
+msgstr ""
+
+#: po/paper-catalog.js:433
+msgid "Spread"
+msgstr ""
+
+#: po/paper-catalog.js:434
+msgid "Spreading"
+msgstr ""
+
+#: po/paper-catalog.js:435
+msgid ""
+"Squeezes pixels outside the inscribed circle inward so the outline becomes a "
+"circle; also turns the spread radial and damps it near the rim; 0 is off, 1 "
+"is full (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:436
+msgid "Static Mesh Gradient"
+msgstr ""
+
+#: po/paper-catalog.js:437
+msgid "Static Radial Gradient"
+msgstr ""
+
+#: po/paper-catalog.js:438
+msgid "Steps Per Color"
+msgstr ""
+
+#: po/paper-catalog.js:439
+msgid ""
+"Straight vertical and horizontal fold lines producing ridges and valleys (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:440
+msgid "Streaming"
+msgstr ""
+
+#: po/paper-catalog.js:441
+msgid "Strength of grain affecting dot size (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:442
+msgid "Strength of grain distortion applied to shape edges (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:443
+msgid ""
+"Strength of grain distortion applied to shape edges, needs distortion > 0 (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:444
+msgid "Strength of grain overlay on final output (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:445
+msgid "Strength of noise distortion, needs noiseFrequency > 0 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:446
+msgid "Strength of noise-based distortion (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:447
+msgid "Strength of noise-driven displacement of cell centers (0 to 0.5)"
+msgstr ""
+
+#: po/paper-catalog.js:448
+msgid "Strength of radial distortion (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:449
+msgid "Strength of sine wave distortion along X axis (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:450
+msgid "Strength of sine wave distortion along Y axis (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:451
+msgid ""
+"Strength of smooth noise applied to both dot positions and color sampling, "
+"positions only with sharp type (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:452
+msgid ""
+"Strength of the bloom/overlay effect, 0 = alpha blend, 1 = additive blend (0 "
+"to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:453
+msgid ""
+"Strength of the color split; how far the color layers are pushed apart; 0 is "
+"off (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:454
+msgid "Strength of the distortion on the shape edges (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:455
+msgid ""
+"Strength of the radial inner shadow inside cells, needs colorGlow alpha > 0 "
+"(0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:456
+msgid "Strength of the swirl distortion, needs swirlIterations > 1 (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:457
+msgid "Stretch"
+msgstr ""
+
+#: po/paper-catalog.js:458
+msgid "Stripes"
+msgstr ""
+
+#: po/paper-catalog.js:459
+msgid "Stroke Cap"
+msgstr ""
+
+#: po/paper-catalog.js:460
+msgid "Stroke Taper"
+msgstr ""
+
+#: po/paper-catalog.js:461
+msgid "Stroke Width"
+msgstr ""
+
+#: po/paper-catalog.js:462
+msgid "Sunset"
+msgstr ""
+
+#: po/paper-catalog.js:463
+msgid "Swirl"
+msgstr ""
+
+#: po/paper-catalog.js:464
+msgid "Swirl Iterations"
+msgstr ""
+
+#: po/paper-catalog.js:465
+msgid "Tangled up"
+msgstr ""
+
+#: po/paper-catalog.js:466
+msgid ""
+"Texture shift in direction opposite to the grid, needs distortion > 0 (-1 to "
+"1)"
+msgstr ""
+
+#: po/paper-catalog.js:467
+msgid "The length of the rays, higher = more spots/shorter rays (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:468
+msgid "The number of rays (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:469
+msgid "Thickness"
+msgstr ""
+
+#: po/paper-catalog.js:470
+msgid "Thickness of individual color spots (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:471
+msgid "Thickness of spiral curve (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:472
+msgid "Thickness of the ring shape (0.01 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:473
+msgid ""
+"Thin strokes along distortion shape, useful for antialiasing on small grid "
+"(0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:474
+msgid "Transparency near central axis (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:475
+msgid "Transparency near viewer (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:476
+msgid "Tree line"
+msgstr ""
+
+#: po/paper-catalog.js:477
+msgid "Triangles"
+msgstr ""
+
+#: po/paper-catalog.js:478
+msgid "Truchet"
+msgstr ""
+
+#: po/paper-catalog.js:479
+msgid "Twist"
+msgstr ""
+
+#: po/paper-catalog.js:480
+msgid "Type"
+msgstr ""
+
+#: po/paper-catalog.js:481
+msgid "Use sampled image's original colors instead of colorFront"
+msgstr ""
+
+#: po/paper-catalog.js:482
+msgid "Use the original colors of the image instead of the color palette"
+msgstr ""
+
+#: po/paper-catalog.js:483
+msgid ""
+"Vertical offset of smoke inside the shape, needs innerGlow > 0 (-1 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:484
+msgid "Vintage"
+msgstr ""
+
+#: po/paper-catalog.js:485
+msgid "Visibility of smoke shape inside the input shape (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:486
+msgid "Visibility of smoke shape outside the input shape (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:487
+msgid ""
+"Visibility of the speckle pattern, darkens the image instead of coloring it "
+"(0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:488
+msgid "Visibility/strength of the rays (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:489
+msgid "Voronoi"
+msgstr ""
+
+#: po/paper-catalog.js:490
+msgid "Vortex power, 0 = straight sectoral shapes (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:491
+msgid "Wallpaper"
+msgstr ""
+
+#: po/paper-catalog.js:492
+msgid "Warp"
+msgstr ""
+
+#: po/paper-catalog.js:493
+msgid "Water"
+msgstr ""
+
+#: po/paper-catalog.js:494
+msgid "Wave"
+msgstr ""
+
+#: po/paper-catalog.js:495
+msgid "Wave X"
+msgstr ""
+
+#: po/paper-catalog.js:496
+msgid "Wave XShift"
+msgstr ""
+
+#: po/paper-catalog.js:497
+msgid "Wave Y"
+msgstr ""
+
+#: po/paper-catalog.js:498
+msgid "Wave YShift"
+msgstr ""
+
+#: po/paper-catalog.js:499
+msgid "Wave amplitude, at frequency = 0 it only shifts the lines (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:500
+msgid "Wave frequency, needs amplitude > 0 (0 to 2)"
+msgstr ""
+
+#: po/paper-catalog.js:501
+msgid "Waves"
+msgstr ""
+
+#: po/paper-catalog.js:502
+msgid "Width of the border/gap between cells (0 to 0.1)"
+msgstr ""
+
+#: po/paper-catalog.js:503
+msgid "Worms"
+msgstr ""
+
+#: po/paper-catalog.js:504
+msgid "Wrinkle Size"
+msgstr ""
+
+#: po/paper-catalog.js:505
+msgid "Wrinkles"
+msgstr ""
+
+#: po/paper-catalog.js:506
+msgid "Yellow ink color in RGBA"
+msgstr ""
+
+#: po/paper-catalog.js:507
+msgid "Zoom level of the base pattern (0 to 1)"
+msgstr ""
+
+#: po/paper-catalog.js:508
+msgid "auto"
+msgstr ""
+
+#: po/paper-catalog.js:509
+msgid "blob"
+msgstr ""
+
+#: po/paper-catalog.js:510
+msgid "cascade"
+msgstr ""
+
+#: po/paper-catalog.js:511
+msgid "checks"
+msgstr ""
+
+#: po/paper-catalog.js:512
+msgid "circle"
+msgstr ""
+
+#: po/paper-catalog.js:513
+msgid "classic"
+msgstr ""
+
+#: po/paper-catalog.js:514
+msgid "contain"
+msgstr ""
+
+#: po/paper-catalog.js:515
+msgid "contour"
+msgstr ""
+
+#: po/paper-catalog.js:516
+msgid "corners"
+msgstr ""
+
+#: po/paper-catalog.js:517
+msgid "cover"
+msgstr ""
+
+#: po/paper-catalog.js:518
+msgid "daisy"
+msgstr ""
+
+#: po/paper-catalog.js:519
+msgid "diamond"
+msgstr ""
+
+#: po/paper-catalog.js:520
+msgid "dots"
+msgstr ""
+
+#: po/paper-catalog.js:521
+msgid "edge"
+msgstr ""
+
+#: po/paper-catalog.js:522
+msgid "flat"
+msgstr ""
+
+#: po/paper-catalog.js:523
+msgid "gooey"
+msgstr ""
+
+#: po/paper-catalog.js:524
+msgid "hex"
+msgstr ""
+
+#: po/paper-catalog.js:525
+msgid "holes"
+msgstr ""
+
+#: po/paper-catalog.js:526
+msgid "ink"
+msgstr ""
+
+#: po/paper-catalog.js:527
+msgid "lens"
+msgstr ""
+
+#: po/paper-catalog.js:528
+msgid "lines"
+msgstr ""
+
+#: po/paper-catalog.js:529
+msgid "linesIrregular"
+msgstr ""
+
+#: po/paper-catalog.js:530
+msgid "metaballs"
+msgstr ""
+
+#: po/paper-catalog.js:531
+msgid "none"
+msgstr ""
+
+#: po/paper-catalog.js:532
+msgid "pattern"
+msgstr ""
+
+#: po/paper-catalog.js:533
+msgid "prism"
+msgstr ""
+
+#: po/paper-catalog.js:534
+msgid "random"
+msgstr ""
+
+#: po/paper-catalog.js:535
+msgid "ripple"
+msgstr ""
+
+#: po/paper-catalog.js:536
+msgid "sharp"
+msgstr ""
+
+#: po/paper-catalog.js:537
+msgid "simplex"
+msgstr ""
+
+#: po/paper-catalog.js:538
+msgid "soft"
+msgstr ""
+
+#: po/paper-catalog.js:539
+msgid "sphere"
+msgstr ""
+
+#: po/paper-catalog.js:540
+msgid "square"
+msgstr ""
+
+#: po/paper-catalog.js:541
+msgid "stripes"
+msgstr ""
+
+#: po/paper-catalog.js:542
+msgid "swirl"
+msgstr ""
+
+#: po/paper-catalog.js:543
+msgid "triangle"
+msgstr ""
+
+#: po/paper-catalog.js:544
+msgid "truchet"
+msgstr ""
+
+#: po/paper-catalog.js:545
+msgid "warp"
+msgstr ""
+
+#: po/paper-catalog.js:546
+msgid "wave"
+msgstr ""
+
+#: po/paper-catalog.js:547
+msgid "zigzag"
+msgstr ""
+
+#: src/catalog.js:10
+msgid "Aurora"
+msgstr ""
+
+#: src/catalog.js:12
+msgid "A slow drift of violet, blue, and light."
+msgstr ""
+
+#: src/catalog.js:18
+msgid "Daybreak"
+msgstr ""
+
+#: src/catalog.js:20
+msgid "The softer side of the morning."
+msgstr ""
+
+#: src/catalog.js:26
+msgid "Tidal"
+msgstr ""
+
+#: src/catalog.js:28
+msgid "Cool currents finding their own rhythm."
+msgstr ""
+
+#: src/catalog.js:35
+msgid "Dusk"
+msgstr ""
+
+#: src/catalog.js:37
+msgid "The last light, held a little longer."
+msgstr ""
+
+#: src/catalog.js:43
+msgid "Ribbon"
+msgstr ""
+
+#: src/catalog.js:45
+msgid "Broad folds of color in gentle motion."
+msgstr ""
+
+#: src/catalog.js:53
+msgid "A quiet patch of green for your desktop."
+msgstr ""
+
+#: src/catalog.js:61
+msgid "A landscape drawn in flowing layers."
+msgstr ""
+
+#: src/catalog.js:69
+msgid "Pearl"
+msgstr ""
+
+#: src/catalog.js:71
+msgid "A little iridescence, without the noise."
+msgstr ""
+
+#: src/catalog.js:78
+msgid "Ember"
+msgstr ""
+
+#: src/catalog.js:80
+msgid "Warm color with a darker heart."
+msgstr ""
+
+#: src/catalog.js:87
+msgid "Scale"
+msgstr ""
+
+#: src/catalog.js:88
+msgid "Rotation"
+msgstr ""
+
+#: src/catalog.js:89
+msgid "Offset X"
+msgstr ""
+
+#: src/catalog.js:90
+msgid "Offset Y"
+msgstr ""
+
+#: src/catalog.js:91
+msgid "Origin X"
+msgstr ""
+
+#: src/catalog.js:92
+msgid "Origin Y"
+msgstr ""
+
+#: src/catalog.js:93
+msgid "World width"
+msgstr ""
+
+#: src/catalog.js:94
+msgid "World height"
+msgstr ""
+
+#: src/catalog.js:95
+msgid "Speed"
+msgstr ""
+
+#: src/catalog.js:96
+msgid "Frame (ms)"
+msgstr ""
+
+#: src/catalog.js:428
+msgid "Choose a wallpaper size up to 8K."
+msgstr ""
+
+#: src/debug-info.js:7
+msgid "Shader / preset"
+msgstr ""
+
+#: src/debug-info.js:8
+msgid "Viewport / scale"
+msgstr ""
+
+#: src/debug-info.js:9
+msgid "Canvas / limit"
+msgstr ""
+
+#: src/debug-info.js:10
+msgid "Observed FPS"
+msgstr ""
+
+#: src/debug-info.js:11
+msgid "Interval / frames"
+msgstr ""
+
+#: src/debug-info.js:12
+msgid "Playback"
+msgstr ""
+
+#: src/debug-info.js:13
+msgid "Time / speed"
+msgstr ""
+
+#: src/debug-info.js:14
+msgid "GTK / WebKit"
+msgstr ""
+
+#: src/debug-info.js:15
+msgid "WebGL renderer"
+msgstr ""
+
+#: src/debug-info.js:41
+msgid "Debug info"
+msgstr ""
+
+#: src/debug-info.js:78
+msgid "{fps} / {target} target"
+msgstr ""
+
+#: src/debug-info.js:80
+msgid "display"
+msgstr ""
+
+#: src/debug-info.js:84
+msgid "{interval} / {count} frame observed"
+msgid_plural "{interval} / {count} frames observed"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/debug-info.js:97
+msgid "WebGL context lost"
+msgstr ""
+
+#: src/debug-info.js:99
+msgid "Paused"
+msgstr ""
+
+#: src/debug-info.js:101
+msgid "Static"
+msgstr ""
+
+#: src/debug-info.js:103
+msgid "Rendering image"
+msgstr ""
+
+#: src/debug-info.js:104
+msgid "Playing"
+msgstr ""
+
+#: src/editor.js:88
+msgid "Shader settings"
+msgstr ""
+
+#: src/editor.js:92
+msgid "Fit"
+msgstr ""
+
+#: src/editor.js:106
+msgid "A world size of 0 follows the canvas."
+msgstr ""
+
+#: src/editor.js:111
+msgid "Position & size"
+msgstr ""
+
+#: src/editor.js:121
+msgid "Negative speed plays in reverse. Set speed to 0 to hold an exact frame."
+msgstr ""
+
+#: src/editor.js:126
+msgid "Animation"
+msgstr ""
+
+#: src/editor.js:222 src/editor.js:226
+msgid "Choose color"
+msgstr ""
+
+#: src/editor.js:233
+msgid "Hex, RGB, or HSL color, with optional opacity"
+msgstr ""
+
+#: src/editor.js:289
+msgid "Colors"
+msgstr ""
+
+#: src/editor.js:300
+msgid "Number of colors (1–{limit})"
+msgstr ""
+
+#: src/editor.js:313
+msgid "Move color up"
+msgstr ""
+
+#: src/editor.js:317
+msgid "Move color down"
+msgstr ""
+
+#: src/editor.js:353
+msgid "Source image"
+msgstr ""
+
+#: src/editor.js:356
+msgid "Built-in sample"
+msgstr ""
+
+#: src/editor.js:358
+msgid "Local image"
+msgstr ""
+
+#: src/editor.js:359
+msgid "No image (procedural shape)"
+msgstr ""
+
+#: src/editor.js:363
+msgid "Choose Image…"
+msgstr ""
+
+#: src/editor.js:368
+msgid "Choose Shader Image"
+msgstr ""
+
+#: src/editor.js:369
+msgid "Images"
+msgstr ""
+
+#: src/editor.js:391
+msgid "Remove image"
+msgstr ""
+
+#: src/editor.js:399
+msgid "Use Sample"
+msgstr ""
+
+#: src/images.js:22
+msgid "Choose an image smaller than 32 MB."
+msgstr ""
+
+#: src/images.js:56
+msgid "The saved image is too large. Choose another image."
+msgstr ""
+
+#: src/kitty.js:83
+msgid "Install Kitty 0.49 or newer to use animated backgrounds."
+msgstr ""
+
+#: src/kitty.js:116
+msgid ""
+"Animated backgrounds require Kitty 0.49 or newer. Choose Still image for "
+"older versions."
+msgstr ""
+
+#: src/kitty.js:184
+msgid "No Wallshader Kitty background was found."
+msgstr ""
+
+#: src/kitty-config.js:19
+msgid ""
+"The Wallshader block in kitty.conf is incomplete or duplicated. Repair it "
+"before applying again."
+msgstr ""
+
+#: src/kitty-config.js:40
+msgid ""
+"Kitty background paths must be absolute and cannot contain newlines or "
+"dollar signs."
+msgstr ""
+
+#: src/live.js:57
+msgid "The extension bundle contains an unsupported file. Rebuild Wallshader."
+msgstr ""
+
+#: src/live.js:70
+msgid ""
+"Animation support is installed. Log out and back in once so GNOME can "
+"discover it. Then open Wallshader and choose “Set Animated Wallpaper” again."
+msgstr ""
+
+#: src/live.js:122
+msgid "Animated wallpapers currently support GNOME 50 on Wayland."
+msgstr ""
+
+#: src/live.js:142
+msgid ""
+"Build Wallshader with “bun run build” to include animated wallpaper support."
+msgstr ""
+
+#: src/live.js:180
+msgid "Enable Wallshader Live Wallpaper in GNOME Extensions, then try again."
+msgstr ""
+
+#: src/main.js:55
+msgid "Wallshader contributors"
+msgstr ""
+
+#: src/main.js:57
+msgid ""
+"A little color for your desktop. Native GNOME wallpapers made with Paper "
+"Shaders."
+msgstr ""
+
+#. Translators: replace this with your name and optional contact details.
+#: src/main.js:63
+msgid "translator-credits"
+msgstr ""
+
+#: src/main.js:65
+msgid "Shaders"
+msgstr ""
+
+#: src/preset-grid.js:34
+msgid "Presets"
+msgstr ""
+
+#: src/preset-grid.js:55
+msgid "{name} (saved preset)"
+msgstr ""
+
+#: src/preset-grid.js:111
+msgid "Delete “{name}”"
+msgstr ""
+
+#: src/preset-options.js:28
+msgid "No unused hex color names remain for this shader."
+msgstr ""
+
+#: src/preset-options.js:35
+msgid "Original"
+msgstr ""
+
+#: src/preset-options.js:39
+msgid "Paper Default"
+msgstr ""
+
+#: src/preview.js:68
+msgid "The preview stopped. Reopen Wallshader to restart the renderer."
+msgstr ""
+
+#: src/preview.js:99
+msgid ""
+"The preview did not start. Check that WebKitGTK and your graphics driver "
+"support WebGL 2."
+msgstr ""
+
+#: src/preview.js:132 src/preview.js:170 src/preview.js:215
+msgid "The preview has closed."
+msgstr ""
+
+#: src/preview.js:182
+msgid "Rendering {name} took too long. Try a smaller image size."
+msgstr ""
+
+#: src/save-preset-dialog.js:13
+msgid "Save Preset"
+msgstr ""
+
+#: src/save-preset-dialog.js:24
+msgid "Cancel"
+msgstr ""
+
+#: src/save-preset-dialog.js:28
+msgid "Save"
+msgstr ""
+
+#: src/save-preset-dialog.js:75
+msgid "_Name"
+msgstr ""
+
+#: src/saved-presets.js:11
+msgid "Invalid saved preset."
+msgstr ""
+
+#: src/saved-presets.js:20
+msgid "Enter a name between 1 and 80 characters."
+msgstr ""
+
+#: src/saved-presets.js:30
+msgid ""
+"A preset with this name already exists for this shader. Choose another name."
+msgstr ""
+
+#: src/sharing.js:30
+msgid ""
+"Paste a Paper code snippet or a Wallshader settings file smaller than 128 KB."
+msgstr ""
+
+#: src/sharing.js:41
+msgid "This is not a supported Wallshader settings file."
+msgstr ""
+
+#: src/sharing.js:47
+msgid ""
+"Paste the complete self-closing shader component from Paper’s Code section."
+msgstr ""
+
+#: src/sharing.js:63
+msgid ""
+"Only literal shader values are supported; JavaScript expressions are never "
+"executed."
+msgstr ""
+
+#: src/sharing.js:74
+msgid "Provide a literal value for {property}."
+msgstr ""
+
+#: src/sharing.js:92
+msgid "Use a literal number, color, boolean, or JSON array for {property}."
+msgstr ""
+
+#: src/sharing.js:109
+msgid "The settings do not identify a supported Paper shader."
+msgstr ""
+
+#: src/sharing.js:118
+msgid ""
+"This snippet uses an external image. Remove its image property, then choose "
+"a local image in Wallshader."
+msgstr ""
+
+#: src/sharing-dialog.js:30
+msgid ""
+"Paste a shader from Paper’s Code section, or settings copied from Wallshader."
+msgstr ""
+
+#: src/sharing-dialog.js:32
+msgid "These settings use Paper’s original shader properties."
+msgstr ""
+
+#: src/sharing-dialog.js:61
+msgid "Apply Settings"
+msgstr ""
+
+#: src/sharing-dialog.js:61
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: src/storage.js:59
+msgid "Saved settings could not be read: {error}"
+msgstr ""
+
+#: src/wallpaper.js:19
+msgid "The renderer did not return a PNG image."
+msgstr ""
+
+#: src/wallpaper.js:61
+msgid "GNOME wallpaper settings are unavailable. You can still export a PNG."
+msgstr ""
+
+#: src/wallpaper.js:68
+msgid ""
+"Your desktop wallpaper is managed by an administrator. You can still export "
+"a PNG."
+msgstr ""
+
+#: src/wallpaper.js:79
+msgid "GNOME could not update the wallpaper."
+msgstr ""
+
+#: src/wallpaper.js:124
+msgid "No valid previous wallpaper was found."
+msgstr ""
+
+#: src/window.js:157
+msgid "Wallpapers made with Paper"
+msgstr ""
+
+#: src/window.js:162
+msgid "Search wallpapers (Ctrl+F)"
+msgstr ""
+
+#: src/window.js:173
+msgid "Customize wallpaper"
+msgstr ""
+
+#: src/window.js:178
+msgid "Import Paper Settings…"
+msgstr ""
+
+#: src/window.js:179
+msgid "Copy Settings…"
+msgstr ""
+
+#: src/window.js:180
+msgid "Copy Paper Code…"
+msgstr ""
+
+#: src/window.js:181
+msgid "Show Debug Info"
+msgstr ""
+
+#: src/window.js:182
+msgid "Restore Previous Wallpaper"
+msgstr ""
+
+#: src/window.js:183
+msgid "About Wallshader"
+msgstr ""
+
+#: src/window.js:184
+msgid "Quit"
+msgstr ""
+
+#: src/window.js:198
+msgid "Search wallpapers"
+msgstr ""
+
+#: src/window.js:216
+msgid "Export PNG…"
+msgstr ""
+
+#: src/window.js:221
+msgid "Save Preset…"
+msgstr ""
+
+#: src/window.js:226
+msgid "Reset Changes"
+msgstr ""
+
+#: src/window.js:231 src/window.js:985
+msgid "Add to favorites"
+msgstr ""
+
+#: src/window.js:255
+msgid "Preview unavailable"
+msgstr ""
+
+#: src/window.js:265 src/window.js:1182
+msgid "Play preview"
+msgstr ""
+
+#: src/window.js:265 src/window.js:1182
+msgid "Pause preview"
+msgstr ""
+
+#: src/window.js:293 src/window.js:323
+msgid "All"
+msgstr ""
+
+#: src/window.js:329
+msgid "Show all wallpapers"
+msgstr ""
+
+#: src/window.js:330
+msgid "Choose a wallpaper category"
+msgstr ""
+
+#: src/window.js:341
+msgid "Favorites"
+msgstr ""
+
+#: src/window.js:342
+msgid "Recent"
+msgstr ""
+
+#: src/window.js:428 src/window.js:1022
+msgid "No wallpapers found"
+msgstr ""
+
+#: src/window.js:433 src/window.js:1029
+msgid "Try a different search or collection."
+msgstr ""
+
+#: src/window.js:442
+msgid "Made with Paper Shaders"
+msgstr ""
+
+#: src/window.js:456
+msgid "Customize"
+msgstr ""
+
+#: src/window.js:476
+msgid "Desktop"
+msgstr ""
+
+#: src/window.js:479 src/window.js:703 src/window.js:1291
+msgid "Set as Wallpaper"
+msgstr ""
+
+#: src/window.js:482
+msgid "Apply this frame to your GNOME desktop"
+msgstr ""
+
+#: src/window.js:483
+msgid "Choose wallpaper destination"
+msgstr ""
+
+#: src/window.js:490 src/window.js:508 src/window.js:817
+msgid "Wallpaper Settings"
+msgstr ""
+
+#: src/window.js:520 src/window.js:524
+msgid "Wallpaper mode"
+msgstr ""
+
+#: src/window.js:522
+msgid "Still image"
+msgstr ""
+
+#: src/window.js:522
+msgid "Animated shader"
+msgstr ""
+
+#: src/window.js:533
+msgid "Animation frame rate"
+msgstr ""
+
+#: src/window.js:537
+msgid "30 FPS · less power"
+msgstr ""
+
+#: src/window.js:538
+msgid "60 FPS · smoother"
+msgstr ""
+
+#: src/window.js:540
+msgid "Wallpaper frame rate"
+msgstr ""
+
+#: src/window.js:545 src/window.js:553
+msgid "Wallpaper rendering"
+msgstr ""
+
+#: src/window.js:549
+msgid "Compatibility (default)"
+msgstr ""
+
+#: src/window.js:550
+msgid "GPU (experimental)"
+msgstr ""
+
+#: src/window.js:564
+msgid ""
+"GPU mode may reduce CPU use but can cause flickering. Takes effect when you "
+"apply the wallpaper."
+msgstr ""
+
+#: src/window.js:571
+msgid "Runs on the desktop after closing this app."
+msgstr ""
+
+#: src/window.js:578 src/window.js:693
+msgid "Pause"
+msgstr ""
+
+#: src/window.js:586
+msgid "Stop"
+msgstr ""
+
+#: src/window.js:601
+msgid ""
+"Saves to {path}. Kitty reloads automatically; if disabled, reload its "
+"settings or open a new instance."
+msgstr ""
+
+#: src/window.js:610
+msgid "Restore Kitty Background"
+msgstr ""
+
+#: src/window.js:617
+msgid "Output resolution"
+msgstr ""
+
+#: src/window.js:619
+msgid "This display"
+msgstr ""
+
+#: src/window.js:627
+msgid "Wallpaper resolution"
+msgstr ""
+
+#: src/window.js:633 src/window.js:676
+msgid "Applies a still image to light and dark appearances."
+msgstr ""
+
+#: src/window.js:667
+msgid ""
+"Animates behind terminal text with a dark tint. Requires Kitty 0.49 or newer "
+"with its shader compiler. Kitty controls animation timing and window size. "
+"Images are optimized to 128 pixels and 256 colors. First use can take a "
+"moment to compile."
+msgstr ""
+
+#: src/window.js:670
+msgid ""
+"Uses the current frame as a tinted Kitty background. Your desktop is "
+"unchanged."
+msgstr ""
+
+#: src/window.js:674
+msgid ""
+"Animates on every display and sets its first frame as the still background. "
+"GNOME 50 on Wayland is required."
+msgstr ""
+
+#: src/window.js:682
+msgid "Starting desktop animation…"
+msgstr ""
+
+#: src/window.js:683
+msgid "Playing on desktop"
+msgstr ""
+
+#: src/window.js:685
+msgid "Ready. Keeps playing after closing this app."
+msgstr ""
+
+#: src/window.js:687
+msgid ""
+"First use installs animation support. GNOME may require one logout before it "
+"is available."
+msgstr ""
+
+#: src/window.js:693
+msgid "Resume"
+msgstr ""
+
+#: src/window.js:699
+msgid "Set Kitty Background"
+msgstr ""
+
+#: src/window.js:700
+msgid "Set Kitty Background (Still)"
+msgstr ""
+
+#: src/window.js:702
+msgid "Set Animated Wallpaper"
+msgstr ""
+
+#: src/window.js:707
+msgid "Apply this background to Kitty"
+msgstr ""
+
+#: src/window.js:708
+msgid "Apply this wallpaper to your GNOME desktop"
+msgstr ""
+
+#: src/window.js:745
+msgid "Deleted “{name}”"
+msgstr ""
+
+#: src/window.js:781
+msgid "Saved “{name}”"
+msgstr ""
+
+#: src/window.js:797
+msgid "Wait for the current image to finish rendering."
+msgstr ""
+
+#: src/window.js:814
+msgid "Import Paper Settings"
+msgstr ""
+
+#: src/window.js:816
+msgid "Paper Code"
+msgstr ""
+
+#: src/window.js:947
+msgid "Custom"
+msgstr ""
+
+#: src/window.js:985
+msgid "Remove from favorites"
+msgstr ""
+
+#: src/window.js:1019
+msgid "No favorites yet"
+msgstr ""
+
+#: src/window.js:1021
+msgid "No recent presets yet"
+msgstr ""
+
+#: src/window.js:1026
+msgid "Star a preset to keep it here."
+msgstr ""
+
+#: src/window.js:1028
+msgid "Applied desktop and Kitty presets appear here."
+msgstr ""
+
+#: src/window.js:1070
+msgid "Applied to Kitty"
+msgstr ""
+
+#: src/window.js:1170
+msgid "Wallpaper changes reset"
+msgstr ""
+
+#: src/window.js:1273
+msgid "Rendering…"
+msgstr ""
+
+#: src/window.js:1323
+msgid "Wallpaper applied, but the preset could not be saved: {error}"
+msgstr ""
+
+#: src/window.js:1357
+msgid "{name} set as wallpaper"
+msgstr ""
+
+#: src/window.js:1360 src/window.js:1436
+msgid "Undo"
+msgstr ""
+
+#: src/window.js:1384
+msgid "Kitty background saved. Reload Kitty settings if needed."
+msgstr ""
+
+#: src/window.js:1399
+msgid "Kitty background restored. Reload Kitty settings if needed."
+msgstr ""
+
+#: src/window.js:1412
+msgid "Starting…"
+msgstr ""
+
+#: src/window.js:1435
+msgid "Animated wallpaper requested"
+msgstr ""
+
+#: src/window.js:1444
+msgid "Log Out to Finish Setup"
+msgstr ""
+
+#: src/window.js:1449
+msgid "Got It"
+msgstr ""
+
+#: src/window.js:1461
+msgid "Export Wallpaper"
+msgstr ""
+
+#: src/window.js:1464
+msgid "PNG images"
+msgstr ""
+
+#: src/window.js:1475
+msgid "Wallpaper exported"
+msgstr ""
+
+#: src/window.js:1491
+msgid "Previous wallpaper restored"
+msgstr ""
+
+#: src/renderer/renderer.js:52
+msgid "Unavailable"
+msgstr ""
+
+#: src/renderer/renderer.js:121
+msgid "Choose the image again to reload this effect."
+msgstr ""
+
+#: src/renderer/renderer.js:255
+msgid "A render is already in progress."
+msgstr ""
+
+#: src/renderer/kitty-shader.js:10
+msgid "Invalid Kitty shader parameter."
+msgstr ""
+
+#: src/renderer/kitty-shader.js:22
+msgid "Unknown Paper shader."
+msgstr ""
+
+#: src/renderer/kitty-shader.js:72
+msgid "The Paper shader changed and needs a reviewed Kitty port."
+msgstr ""
+
+#: src/renderer/kitty-texture.js:118
+msgid "Only one texture can be embedded in a Kitty shader."
+msgstr ""

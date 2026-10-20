@@ -8,7 +8,7 @@ if (( $# > 1 )); then
   printf 'Usage: %s [vMAJOR.MINOR.PATCH]\n' "$0" >&2
   exit 1
 fi
-for tool in bun meson ninja gjs python3 desktop-file-validate dpkg-deb rpmbuild zstd; do
+for tool in bun meson ninja gjs python3 msgfmt xgettext msgcmp desktop-file-validate dpkg-deb rpmbuild zstd; do
   if ! command -v "$tool" >/dev/null 2>&1; then
     printf 'Missing package build tool: %s\n' "$tool" >&2
     exit 1
@@ -38,6 +38,7 @@ mkdir -p "$install_root" "$assets_dir"
 
 # Always rebuild the renderer and its self-contained Shell extension together.
 bun run build
+bun run translations:check
 meson setup "$work_dir/build" --prefix=/usr --buildtype=release
 meson_version=$(meson introspect --projectinfo "$work_dir/build" | python3 -c 'import json, sys; print(json.load(sys.stdin)["version"])')
 if [[ "$version" != "$meson_version" ]]; then
@@ -70,6 +71,12 @@ for file in \
     exit 1
   fi
 done
+while read -r language; do
+  [[ -z "$language" || "$language" == \#* ]] && continue
+  test -s "$install_root/usr/share/locale/$language/LC_MESSAGES/wallshader.mo"
+  cmp "$install_root/usr/share/locale/$language/LC_MESSAGES/wallshader.mo" \
+    "$install_root/usr/share/wallshader/extension/app/build/locale/$language/LC_MESSAGES/wallshader.mo"
+done < po/LINGUAS
 cmp "data/icons/hicolor/scalable/apps/$app_id.svg" \
   "$install_root/usr/share/icons/hicolor/scalable/apps/$app_id.svg"
 
@@ -149,6 +156,7 @@ cp -a usr %{buildroot}/
 %{_datadir}/applications/$app_id.desktop
 %{_datadir}/icons/hicolor/scalable/apps/$app_id.svg
 %{_datadir}/wallshader
+%{_datadir}/locale/*/LC_MESSAGES/wallshader.mo
 SPEC
 rpmbuild -bb \
   --define "_topdir $rpm_topdir" \

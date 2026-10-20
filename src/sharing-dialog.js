@@ -1,3 +1,4 @@
+import { _ } from './i18n.js';
 import Adw from 'gi://Adw?version=1';
 import Gtk from 'gi://Gtk?version=4.0';
 import Gdk from 'gi://Gdk?version=4.0';
@@ -25,8 +26,10 @@ export function showSharingDialog(
   box.append(
     new Gtk.Label({
       label: editable
-        ? 'Paste a shader from Paper’s Code section, or settings copied from Wallshader.'
-        : 'These settings use Paper’s original shader properties.',
+        ? _(
+            'Paste a shader from Paper’s Code section, or settings copied from Wallshader.',
+          )
+        : _('These settings use Paper’s original shader properties.'),
       wrap: true,
       xalign: 0,
     }),
@@ -55,7 +58,7 @@ export function showSharingDialog(
   });
   box.append(message);
   const apply = new Gtk.Button({
-    label: editable ? 'Apply Settings' : 'Copy to Clipboard',
+    label: editable ? _('Apply Settings') : _('Copy to Clipboard'),
     css_classes: ['suggested-action', 'pill'],
   });
   apply.connect('clicked', () => {

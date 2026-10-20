@@ -1,3 +1,4 @@
+import { _ } from './i18n.js';
 import Adw from 'gi://Adw?version=1';
 import Gtk from 'gi://Gtk?version=4.0';
 import Gdk from 'gi://Gdk?version=4.0';
@@ -7,7 +8,8 @@ import System from 'system';
 import { APP_ID, ROOT } from './paths.js';
 import { WallshaderWindow } from './window.js';
 
-const smoke = ARGV.includes('--smoke-test');
+const i18nTest = ARGV.includes('--i18n-test');
+const smoke = ARGV.includes('--smoke-test') || i18nTest;
 const app = new Adw.Application({
   application_id: smoke ? `${APP_ID}.Test` : APP_ID,
   flags: Gio.ApplicationFlags.DEFAULT_FLAGS,
@@ -50,14 +52,17 @@ app.connect('startup', () => {
       application_name: 'Wallshader',
       application_icon: APP_ID,
       version: '0.1.10',
-      developer_name: 'Wallshader contributors',
-      comments:
+      developer_name: _('Wallshader contributors'),
+      comments: _(
         'A little color for your desktop. Native GNOME wallpapers made with Paper Shaders.',
+      ),
       license_type: Gtk.License.GPL_3_0,
       website: 'https://github.com/stonega/wallshader',
       issue_url: 'https://github.com/stonega/wallshader/issues',
+      // Translators: replace this with your name and optional contact details.
+      translator_credits: _('translator-credits'),
     });
-    about.add_acknowledgement_section('Shaders', [
+    about.add_acknowledgement_section(_('Shaders'), [
       'Paper Shaders by Lost Coast Labs, Inc. — Apache-2.0',
     ]);
     about.present(app.get_active_window());
@@ -68,19 +73,21 @@ app.connect('activate', () => {
   const window = app.get_active_window() ?? new WallshaderWindow(app);
   window.present();
   if (smoke) {
-    import('../tests/native-smoke.js')
+    import(i18nTest ? '../tests/i18n-native.js' : '../tests/native-smoke.js')
       .then(({ run }) => run(window))
       .then(() => {
         console.log('Native smoke test passed.');
         window.close();
+        app.quit();
       })
       .catch((error) => {
         console.error(`${error.message}\n${error.stack ?? ''}`);
         exitCode = 1;
         window.close();
+        app.quit();
       });
   }
 });
 
-app.run(ARGV.filter((arg) => arg !== '--smoke-test'));
+app.run(ARGV.filter((arg) => !['--smoke-test', '--i18n-test'].includes(arg)));
 System.exit(exitCode);

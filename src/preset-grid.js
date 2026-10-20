@@ -1,3 +1,4 @@
+import { _, format } from './i18n.js';
 import Gtk from 'gi://Gtk?version=4.0';
 import Gdk from 'gi://Gdk?version=4.0';
 import GLib from 'gi://GLib';
@@ -30,7 +31,7 @@ export const PresetGrid = GObject.registerClass(
         valign: Gtk.Align.START,
         css_classes: ['preset-grid'],
       });
-      this.flow.update_property([Gtk.AccessibleProperty.LABEL], ['Presets']);
+      this.flow.update_property([Gtk.AccessibleProperty.LABEL], [_('Presets')]);
       this.append(this.flow);
     }
 
@@ -48,10 +49,11 @@ export const PresetGrid = GObject.registerClass(
       this.options = presetOptions(preset, savedPresets);
       this.cards = new Map();
       for (const option of this.options) {
+        const displayName = option.savedId ? option.name : _(option.name);
         const card = new Gtk.ToggleButton({
           tooltip_text: option.savedId
-            ? `${option.name} (saved preset)`
-            : option.name,
+            ? format(_('{name} (saved preset)'), { name: displayName })
+            : displayName,
           css_classes: ['flat', 'preset-card'],
           overflow: Gtk.Overflow.HIDDEN,
         });
@@ -86,7 +88,7 @@ export const PresetGrid = GObject.registerClass(
         });
         caption.append(
           new Gtk.Label({
-            label: option.name,
+            label: displayName,
             ellipsize: 3,
             max_width_chars: 12,
             hexpand: true,
@@ -106,7 +108,7 @@ export const PresetGrid = GObject.registerClass(
               icon_name: 'user-trash-symbolic',
               pixel_size: 12,
             }),
-            tooltip_text: `Delete “${option.name}”`,
+            tooltip_text: format(_('Delete “{name}”'), { name: displayName }),
             css_classes: ['flat', 'preset-delete'],
             halign: Gtk.Align.END,
             valign: Gtk.Align.END,

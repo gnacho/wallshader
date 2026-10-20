@@ -1,5 +1,6 @@
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
+import { _, format } from './translation.js';
 import { CONFIG_DIR } from './paths.js';
 import { normalizeState } from './catalog.js';
 
@@ -55,7 +56,9 @@ export class Store {
       this.state = normalizeState(readJson(this.path));
     } catch (error) {
       this.state = normalizeState();
-      this.warning = `Saved settings could not be read: ${error.message}`;
+      this.warning = format(_('Saved settings could not be read: {error}'), {
+        error: error.message,
+      });
     }
   }
 

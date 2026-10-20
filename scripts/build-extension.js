@@ -1,4 +1,4 @@
-import { mkdir, copyFile, cp } from 'node:fs/promises';
+import { mkdir, copyFile, cp, rm } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dir, '..');
@@ -17,6 +17,8 @@ for (const file of [
   'debug-info.js',
   'images.js',
   'paths.js',
+  'i18n.js',
+  'translation.js',
   'storage.js',
   'catalog.js',
   'paper-catalog.js',
@@ -25,6 +27,10 @@ for (const file of [
 ])
   await copyFile(`${root}/src/${file}`, `${output}/app/src/${file}`);
 await cp(`${root}/build/renderer`, `${output}/app/build/renderer`, {
+  recursive: true,
+});
+await rm(`${output}/app/build/locale`, { recursive: true, force: true });
+await cp(`${root}/build/locale`, `${output}/app/build/locale`, {
   recursive: true,
 });
 await cp(`${root}/data/third-party`, `${output}/app/data/third-party`, {

@@ -4,6 +4,13 @@ Wallshader is a standalone GNOME app. GJS ES modules own the GTK 4/libadwaita
 interface, persistence, file dialogs, and wallpaper settings. There is no web app
 framework, Electron process, or network service.
 
+Native UI text uses a gettext domain initialized before widgets are constructed.
+Shared catalog metadata retains canonical English strings and is translated only
+for presentation; shader parameters, stored names, and exported code stay lossless.
+The renderer bundle includes its own catalogs. See
+[translation maintenance](../implementation/translations.md) for the extraction,
+installation, and contributor workflow.
+
 ## Interface
 
 The artwork carries the visual identity. Adwaita supplies the system font,

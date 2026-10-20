@@ -1,3 +1,4 @@
+import { _, format } from './i18n.js';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import WebKit from 'gi://WebKit?version=6.0';
@@ -37,13 +38,13 @@ export class Preview {
           )
             onDiagnostics?.(message);
           if (message.type === 'error')
-            this._fail(new Error(message.message), onError);
+            this._fail(new Error(_(message.message)), onError);
           if (message.type === 'response') {
             const pending = this._pending.get(message.id);
             if (!pending) return;
             GLib.source_remove(pending.timeout);
             this._pending.delete(message.id);
-            if (message.error) pending.reject(new Error(message.error));
+            if (message.error) pending.reject(new Error(_(message.error)));
             else pending.resolve(message.result);
           }
         } catch (error) {
@@ -64,7 +65,7 @@ export class Preview {
     this.widget.connect('web-process-terminated', () =>
       this._fail(
         new Error(
-          'The preview stopped. Reopen Wallshader to restart the renderer.',
+          _('The preview stopped. Reopen Wallshader to restart the renderer.'),
         ),
         onError,
       ),
@@ -94,7 +95,9 @@ export class Preview {
         this._startupTimeout = null;
         this._fail(
           new Error(
-            'The preview did not start. Check that WebKitGTK and your graphics driver support WebGL 2.',
+            _(
+              'The preview did not start. Check that WebKitGTK and your graphics driver support WebGL 2.',
+            ),
           ),
           onError,
         );
@@ -126,7 +129,7 @@ export class Preview {
 
   async evaluate(script) {
     await this.ready;
-    if (this._closed) throw new Error('The preview has closed.');
+    if (this._closed) throw new Error(_('The preview has closed.'));
     if (this._error) throw this._error;
     return new Promise((resolve, reject) =>
       this.widget.evaluate_javascript(
@@ -164,7 +167,7 @@ export class Preview {
   request(method, args = {}) {
     const operation = this._queue.then(async () => {
       await this.ready;
-      if (this._closed) throw new Error('The preview has closed.');
+      if (this._closed) throw new Error(_('The preview has closed.'));
       if (GLib.getenv('WALLSHADER_TRACE') === '1')
         console.log(`Render request: ${method} ${args.preset?.name ?? ''}`);
       if (args.preset)
@@ -175,7 +178,10 @@ export class Preview {
           this._pending.delete(id);
           reject(
             new Error(
-              `Rendering ${args.preset?.name ?? method} took too long. Try a smaller image size.`,
+              format(
+                _('Rendering {name} took too long. Try a smaller image size.'),
+                { name: _(args.preset?.name ?? method) },
+              ),
             ),
           );
           return GLib.SOURCE_REMOVE;
@@ -206,7 +212,7 @@ export class Preview {
       null,
     );
     this._debugEnabled = false;
-    this._fail(new Error('The preview has closed.'), () => {});
+    this._fail(new Error(_('The preview has closed.')), () => {});
     this._closed = true;
     if (this._startupTimeout) GLib.source_remove(this._startupTimeout);
     this.widget.stop_loading();

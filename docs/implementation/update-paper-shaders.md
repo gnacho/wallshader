@@ -80,12 +80,15 @@ settings, including repeated normalization so migrations do not run twice.
    ```sh
    bun scripts/sync-paper.js /path/to/reviewed-paper-shaders-checkout
    bunx biome check --write src/paper-catalog.js
+   bun run translations:update
    ```
 
 5. Inspect the generated diff and every `Ranges to verify` message. Check missing
    or unexpected shaders, fields, defaults, enum values, presets, image flags, and
    mipmaps against upstream. Fix generation rules and regenerate instead of
    hand-editing `src/paper-catalog.js`.
+   Review new or changed translation messages and refresh the extraction-only
+   companion in `po/`; see [Translations](translations.md).
 6. Apply compatibility migrations and any native control changes. Verify original
    wallpaper defaults, saved presets, image selections, and settings/code round
    trips. Do not silently discard old values just because upstream renamed them.

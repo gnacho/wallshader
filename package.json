@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Native GNOME wallpapers made with Paper Shaders",
   "scripts": {
-    "build": "bun scripts/build.js && bun scripts/build-extension.js",
+    "build": "bun scripts/build-translations.js && bun scripts/build.js && bun scripts/build-extension.js",
     "build:extension": "bun run build",
     "package": "./scripts/package.sh",
     "start": "./scripts/run.sh",
@@ -13,6 +13,9 @@
     "format": "biome check --write .",
     "test": "bun test",
     "test:native": "./scripts/test-native.sh",
+    "translations:update": "bun scripts/update-translations.js",
+    "translations:check": "python3 scripts/check-translations.py",
+    "test:i18n": "./scripts/test-i18n.sh",
     "test:kitty": "bun scripts/test-kitty.js",
     "test:shell": "./scripts/test-shell.sh",
     "test:kitty:render": "./scripts/test-kitty-render.sh"

@@ -1,3 +1,4 @@
+import { _ } from './translation.js';
 import { PAPER_SHADERS } from './paper-catalog.js';
 
 // Keep the user's configuration outside this block byte-for-byte intact.
@@ -14,7 +15,9 @@ function blockRange(source) {
     starts[0].index >= ends[0].index
   )
     throw new Error(
-      'The Wallshader block in kitty.conf is incomplete or duplicated. Repair it before applying again.',
+      _(
+        'The Wallshader block in kitty.conf is incomplete or duplicated. Repair it before applying again.',
+      ),
     );
   const end = ends[0].index + ends[0][0].length;
   return [starts[0].index, end + (source[end] === '\n' ? 1 : 0)];
@@ -33,7 +36,9 @@ export function kittyBackgroundConfig(source, imagePath, pipelinePath = null) {
   for (const path of [imagePath, pipelinePath].filter(Boolean))
     if (!path.startsWith('/') || /[\r\n\0$]/.test(path))
       throw new Error(
-        'Kitty background paths must be absolute and cannot contain newlines or dollar signs.',
+        _(
+          'Kitty background paths must be absolute and cannot contain newlines or dollar signs.',
+        ),
       );
   const newline = source.includes('\r\n') ? '\r\n' : '\n';
   // background_image is a glob, not a shell-quoted argument. Escape glob metacharacters.

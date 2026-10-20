@@ -12,4 +12,6 @@ export XDG_CACHE_HOME="$test_dir/cache"
 export KITTY_CONFIG_DIRECTORY="$test_dir/config/kitty"
 mkdir -p "$XDG_CONFIG_HOME" "$XDG_DATA_HOME" "$XDG_CACHE_HOME"
 export WALLSHADER_ARTIFACTS="$app_dir/artifacts"
-timeout 240 gjs -m "$app_dir/src/main.js" --smoke-test
+if [ "$#" -eq 0 ]; then set -- --smoke-test; fi
+export GTK_A11Y=none
+dbus-run-session -- timeout 240 gjs -m "$app_dir/src/main.js" "$@"

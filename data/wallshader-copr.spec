@@ -37,3 +37,4 @@ cp -a usr %{buildroot}/
 %{_datadir}/applications/io.github.wallshader.Wallshader.desktop
 %{_datadir}/icons/hicolor/scalable/apps/io.github.wallshader.Wallshader.svg
 %{_datadir}/wallshader
+%{_datadir}/locale/*/LC_MESSAGES/wallshader.mo

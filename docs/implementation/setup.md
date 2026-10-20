@@ -2,7 +2,9 @@
 
 Use a GNOME graphical session with GJS 1.80+, GTK 4.14+, libadwaita 1.5+, and
 WebKitGTK 6.0. Fedora's packages are `gjs gtk4 libadwaita webkitgtk6.0`.
-Meson and Ninja are needed only for installation. Bun is required for build tools.
+Meson and Ninja are needed only for installation. Bun and GNU gettext are required
+for build tools. See [Translations](translations.md) for catalog maintenance and
+adding languages.
 
 Run `bun install --frozen-lockfile`, `bun run build`, then `./scripts/run.sh`.
 The build also packages the live wallpaper extension under `build/extension/`.
@@ -15,7 +17,8 @@ the web CSS parser and checked by GTK during the native smoke test.
 `bun test` exercises state validation, every upstream preset's parameter values,
 settings/code round trips, search and capture limits. Frame-clock tests cover
 30/60 fps pacing across display refresh rates, timestamp jitter and stalls.
-`bun run test:native` uses actual GTK/WebKit rendering and GSettings with isolated
+`bun run test:native` uses actual GTK/WebKit rendering and GSettings with a private
+D-Bus session and isolated
 XDG directories and `GSETTINGS_BACKEND=memory`. Do not remove those safeguards.
 It verifies that animated apply installs a matching first-frame PNG, preserves
 the original wallpaper backup across reapply, and handles capture/save/startup

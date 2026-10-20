@@ -1,3 +1,4 @@
+import { _, N_ } from './translation.js';
 import {
   SHADERS,
   createPreset,
@@ -24,18 +25,18 @@ export function randomPresetName(
     if (!names.has(name)) return name;
     color = (color + 1) % 0x1000000;
   }
-  throw new Error('No unused hex color names remain for this shader.');
+  throw new Error(_('No unused hex color names remain for this shader.'));
 }
 
 export function presetOptions(preset, savedPresets = []) {
   const original = createPreset(preset.id);
   const originalFingerprint = presetFingerprint(original);
   return [
-    { key: 'default', name: 'Original', preset: original },
+    { key: 'default', name: N_('Original'), preset: original },
     ...SHADERS[preset.shader].presets
       .map((variant, index) => ({
         key: `paper:${index}`,
-        name: variant.name === 'Default' ? 'Paper Default' : variant.name,
+        name: variant.name === 'Default' ? N_('Paper Default') : variant.name,
         index,
         preset: fromPaperParams(preset.id, variant.params, index),
       }))

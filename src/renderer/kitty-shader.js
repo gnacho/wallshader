@@ -1,3 +1,4 @@
+import { N_ } from '../translation.js';
 import { KITTY_ANIMATED_SHADERS } from '../kitty-config.js';
 import { kittyCompat, convertPaper } from './kitty-compat.js';
 import { textureSource, textureAssets } from './kitty-texture.js';
@@ -6,7 +7,7 @@ const INLINE_IMAGE_SHADERS = new Set(['gem-smoke', 'heatmap', 'liquid-metal']);
 
 function number(value) {
   if (!Number.isFinite(value))
-    throw new Error('Invalid Kitty shader parameter.');
+    throw new Error(N_('Invalid Kitty shader parameter.'));
   return Number.isInteger(value) ? `${value}.0` : String(value);
 }
 
@@ -18,7 +19,7 @@ function literal(value, type) {
 // Every source is pinned and covered by the Kitty compilation fixtures.
 export function kittyShader(preset, glsl, uniforms, fps = 30, textures = []) {
   if (!KITTY_ANIMATED_SHADERS.has(preset.shader))
-    throw new Error('Unknown Paper shader.');
+    throw new Error(N_('Unknown Paper shader.'));
   const constants = [];
   const dynamic = new Set(['u_time', 'u_resolution']);
   const values = {
@@ -68,7 +69,7 @@ export function kittyShader(preset, glsl, uniforms, fps = 30, textures = []) {
     .replace('void main()', '[mutating] void shade()');
   if (/\b(?:uniform|sampler2D|mat[34])\b/.test(body))
     throw new Error(
-      'The Paper shader changed and needs a reviewed Kitty port.',
+      N_('The Paper shader changed and needs a reviewed Kitty port.'),
     );
   body = `
 ${kittyCompat}

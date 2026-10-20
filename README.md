@@ -89,7 +89,7 @@ cd packaging/aur
 makepkg --syncdeps --install
 ```
 
-Bun and Meson are build dependencies only. Animated wallpapers require GNOME 50
+Bun, Meson, and gettext are build dependencies only. Animated wallpapers require GNOME 50
 on Wayland. See the [AUR guide](docs/implementation/aur.md) for verification,
 publication, and release updates.
 
@@ -119,13 +119,13 @@ GNOME runtime and build tools for your distribution.
 Fedora:
 
 ```sh
-sudo dnf install git gjs gtk4 libadwaita webkitgtk6.0 gsettings-desktop-schemas meson ninja-build desktop-file-utils
+sudo dnf install git gjs gtk4 libadwaita webkitgtk6.0 gsettings-desktop-schemas meson ninja-build gettext desktop-file-utils
 ```
 
 Debian / Ubuntu:
 
 ```sh
-sudo apt install git gjs gir1.2-gtk-4.0 gir1.2-adw-1 gir1.2-webkit-6.0 gsettings-desktop-schemas meson ninja-build libgtk-4-bin desktop-file-utils
+sudo apt install git gjs gir1.2-gtk-4.0 gir1.2-adw-1 gir1.2-webkit-6.0 gsettings-desktop-schemas meson ninja-build gettext libgtk-4-bin desktop-file-utils
 ```
 
 Clone the repository and install for the current user:
@@ -151,6 +151,10 @@ bun run build
 For a custom prefix, use `meson setup build-native --prefix=/your/prefix` and
 `meson install -C build-native` after installing dependencies and building assets.
 The application runs with GJS; runtime assets are entirely local.
+
+The app follows the system language, with Spanish as the first translation and
+English fallback. See [Translations](docs/implementation/translations.md) to
+contribute or add another language.
 
 ## Verify
 

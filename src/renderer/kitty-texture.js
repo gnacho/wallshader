@@ -1,3 +1,4 @@
+import { N_ } from '../translation.js';
 // Kitty has no external texture bindings. Package texels as read-only shader data
 // and reproduce WebGL's clamp-to-edge, bilinear and trilinear sampling.
 // A 256-color palette bounds driver compilation work. Noise is already paletted
@@ -114,7 +115,7 @@ public float4 fragment_main(float4 color, KittyTextures t, KittyCustomShaderData
 export function textureSource(textures, inline = false) {
   if (!textures.length) return '';
   if (inline && textures.length !== 1)
-    throw new Error('Only one texture can be embedded in a Kitty shader.');
+    throw new Error(N_('Only one texture can be embedded in a Kitty shader.'));
   const inlineData = inline ? encodedTexture(textures[0], 0) : null;
   const sources = textures.map((texture, id) => {
     let offset = 0;

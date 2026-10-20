@@ -1,17 +1,18 @@
+import { _, ngettext, format } from './i18n.js';
 import Gtk from 'gi://Gtk?version=4.0';
 import Pango from 'gi://Pango';
 import WebKit from 'gi://WebKit?version=6.0';
 
 const fields = [
-  ['shader', 'Shader / preset'],
-  ['viewport', 'Viewport / scale'],
-  ['canvas', 'Canvas / limit'],
-  ['fps', 'Observed FPS'],
-  ['frames', 'Interval / frames'],
-  ['playback', 'Playback'],
-  ['frame', 'Time / speed'],
-  ['backend', 'GTK / WebKit'],
-  ['gpu', 'WebGL renderer'],
+  ['shader', _('Shader / preset')],
+  ['viewport', _('Viewport / scale')],
+  ['canvas', _('Canvas / limit')],
+  ['fps', _('Observed FPS')],
+  ['frames', _('Interval / frames')],
+  ['playback', _('Playback')],
+  ['frame', _('Time / speed')],
+  ['backend', _('GTK / WebKit')],
+  ['gpu', _('WebGL renderer')],
 ];
 
 export class DebugInfo {
@@ -37,7 +38,7 @@ export class DebugInfo {
     });
     const header = new Gtk.Box({ spacing: 8 });
     header.append(
-      new Gtk.Label({ label: 'Debug info', xalign: 0, hexpand: true }),
+      new Gtk.Label({ label: _('Debug info'), xalign: 0, hexpand: true }),
     );
     this.panel.append(header);
     const grid = new Gtk.Grid({ column_spacing: 10, row_spacing: 2 });
@@ -71,23 +72,39 @@ export class DebugInfo {
       WebKit.get_micro_version(),
     ].join('.');
     const values = {
-      shader: `${info.shader} / ${info.preset}`,
+      shader: `${_(info.shader)} / ${info.preset}`,
       viewport: `${info.viewport.join(' × ')} / ${info.scale}×`,
       canvas: `${info.canvas.join(' × ')} / 2.07 MP`,
-      fps: `${info.fps.toFixed(1)} / ${info.targetFps || 'display'} target`,
-      frames: `${info.frameInterval === null ? '—' : `${info.frameInterval.toFixed(1)} ms`} / ${info.total} observed`,
+      fps: format(_('{fps} / {target} target'), {
+        fps: info.fps.toFixed(1),
+        target: info.targetFps || _('display'),
+      }),
+      frames: format(
+        ngettext(
+          '{interval} / {count} frame observed',
+          '{interval} / {count} frames observed',
+          info.total,
+        ),
+        {
+          interval:
+            info.frameInterval === null
+              ? '—'
+              : `${info.frameInterval.toFixed(1)} ms`,
+          count: info.total,
+        },
+      ),
       playback: info.contextLost
-        ? 'WebGL context lost'
+        ? _('WebGL context lost')
         : info.paused
-          ? 'Paused'
+          ? _('Paused')
           : info.speed === 0
-            ? 'Static'
+            ? _('Static')
             : info.busy
-              ? 'Rendering image'
-              : 'Playing',
+              ? _('Rendering image')
+              : _('Playing'),
       frame: `${Math.round(info.frame).toLocaleString()} ms / ${info.speed}×`,
       backend: `${backend ?? '—'} / ${version}`,
-      gpu: info.gpu,
+      gpu: _(info.gpu),
     };
     for (const [key, text] of Object.entries(values)) {
       const value = this.values.get(key);

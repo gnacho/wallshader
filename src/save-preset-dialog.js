@@ -1,3 +1,4 @@
+import { _ } from './i18n.js';
 import Adw from 'gi://Adw?version=1';
 import Gtk from 'gi://Gtk?version=4.0';
 import Gdk from 'gi://Gdk?version=4.0';
@@ -9,7 +10,7 @@ import { pngBytes } from './wallpaper.js';
 export const SavePresetDialog = GObject.registerClass(
   class SavePresetDialog extends Adw.Dialog {
     _init({ name, loadPreview, onSave }) {
-      super._init({ title: 'Save Preset', content_width: 400 });
+      super._init({ title: _('Save Preset'), content_width: 400 });
       this.onSave = onSave;
       this._closed = false;
       this.connect('closed', () => {
@@ -20,11 +21,11 @@ export const SavePresetDialog = GObject.registerClass(
         show_start_title_buttons: false,
         show_end_title_buttons: false,
       });
-      const cancel = new Gtk.Button({ label: 'Cancel' });
+      const cancel = new Gtk.Button({ label: _('Cancel') });
       cancel.connect('clicked', () => this.close());
       header.pack_start(cancel);
       this.saveButton = new Gtk.Button({
-        label: 'Save',
+        label: _('Save'),
         sensitive: false,
         css_classes: ['suggested-action'],
       });
@@ -71,7 +72,7 @@ export const SavePresetDialog = GObject.registerClass(
         activates_default: true,
       });
       const nameLabel = new Gtk.Label({
-        label: '_Name',
+        label: _('_Name'),
         use_underline: true,
         mnemonic_widget: this.nameEntry,
         xalign: 0,

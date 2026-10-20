@@ -23,6 +23,7 @@ import {
   saveNamedPreset,
 } from '../src/saved-presets.js';
 import { presetFingerprint } from '../src/preset-options.js';
+import { _ } from '../src/i18n.js';
 import { checkKittyBackground } from './kitty-native.js';
 
 function assert(condition, message) {
@@ -47,7 +48,7 @@ function checkWallpaperTarget(window) {
   const wallpaperBefore = window.wallpaper.settings.get_string('picture-uri');
   window.wallpaperTargetAction.activate(new GLib.Variant('s', 'kitty'));
   assert(
-    window.applyButton.label === 'Set Kitty Background' &&
+    window.applyButton.label === _('Set Kitty Background') &&
       new Store().state.wallpaperTarget === 'kitty' &&
       !window.desktopOptions.visible &&
       window.kittyOptions.visible,
@@ -55,7 +56,7 @@ function checkWallpaperTarget(window) {
   );
   window.wallpaperTargetAction.activate(new GLib.Variant('s', 'desktop'));
   assert(
-    window.applyButton.label === 'Set Animated Wallpaper' &&
+    window.applyButton.label === _('Set Animated Wallpaper') &&
       new Store().state.wallpaperTarget === 'desktop' &&
       window.desktopOptions.visible &&
       !window.kittyOptions.visible &&
@@ -78,7 +79,7 @@ async function checkCollections(window) {
   assert(
     window.categoryButton instanceof Adw.SplitButton &&
       window.categoryButton.get_popover() === window.categoryPopover &&
-      window.categoryLabel.get_label() === 'All',
+      window.categoryLabel.get_label() === _('All'),
     'All does not have a separate category arrow',
   );
   const allOption = window.categoryPopover.get_child().get_first_child();

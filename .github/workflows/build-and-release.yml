@@ -38,12 +38,15 @@ jobs:
             desktop-file-utils \
             dpkg-dev \
             gjs \
+            gettext \
             libgtk-4-bin \
+            locales \
             meson \
             ninja-build \
             rpm \
             shellcheck \
             zstd
+          sudo locale-gen en_US.UTF-8
 
       - name: Install shader and development dependencies
         run: bun install --frozen-lockfile
@@ -52,6 +55,7 @@ jobs:
         run: |
           bun run check
           bun test
+          bun run test:i18n
           shellcheck scripts/package.sh
 
       - name: Build packages

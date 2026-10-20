@@ -1,3 +1,4 @@
+import { _ } from './i18n.js';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import Gdk from 'gi://Gdk?version=4.0';
@@ -15,7 +16,7 @@ export function pngBytes(dataUri) {
     typeof dataUri !== 'string' ||
     !dataUri.startsWith('data:image/png;base64,')
   )
-    throw new Error('The renderer did not return a PNG image.');
+    throw new Error(_('The renderer did not return a PNG image.'));
   const bytes = GLib.base64_decode(
     dataUri.slice('data:image/png;base64,'.length),
   );
@@ -56,12 +57,16 @@ export class Wallpaper {
   _check() {
     if (!this.settings)
       throw new Error(
-        'GNOME wallpaper settings are unavailable. You can still export a PNG.',
+        _(
+          'GNOME wallpaper settings are unavailable. You can still export a PNG.',
+        ),
       );
     for (const key of ['picture-uri', 'picture-uri-dark', 'picture-options']) {
       if (!this.settings.is_writable(key))
         throw new Error(
-          'Your desktop wallpaper is managed by an administrator. You can still export a PNG.',
+          _(
+            'Your desktop wallpaper is managed by an administrator. You can still export a PNG.',
+          ),
         );
     }
   }
@@ -71,7 +76,7 @@ export class Wallpaper {
     for (const [key, value] of Object.entries(values)) {
       if (!this.settings.set_string(key, value)) {
         this.settings.revert();
-        throw new Error('GNOME could not update the wallpaper.');
+        throw new Error(_('GNOME could not update the wallpaper.'));
       }
     }
     this.settings.apply();
@@ -116,7 +121,7 @@ export class Wallpaper {
         (key) => typeof backup[key] === 'string',
       )
     )
-      throw new Error('No valid previous wallpaper was found.');
+      throw new Error(_('No valid previous wallpaper was found.'));
     this._set(
       Object.fromEntries(
         ['picture-uri', 'picture-uri-dark', 'picture-options'].map((key) => [

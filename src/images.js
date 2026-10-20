@@ -1,3 +1,4 @@
+import { _ } from './i18n.js';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import GdkPixbuf from 'gi://GdkPixbuf';
@@ -18,7 +19,7 @@ export async function importImage(file) {
     null,
   );
   if (info.get_size() > 32 * 1024 * 1024)
-    throw new Error('Choose an image smaller than 32 MB.');
+    throw new Error(_('Choose an image smaller than 32 MB.'));
   const stream = await file.read_async(GLib.PRIORITY_DEFAULT, null);
   let image;
   try {
@@ -52,7 +53,7 @@ export async function rendererPreset(preset) {
       null,
     );
     if (info.get_size() > 32 * 1024 * 1024)
-      throw new Error('The saved image is too large. Choose another image.');
+      throw new Error(_('The saved image is too large. Choose another image.'));
     const [bytes] = await file.load_contents_async(null);
     const loader = new GdkPixbuf.PixbufLoader();
     loader.write(bytes);

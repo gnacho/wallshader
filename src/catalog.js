@@ -1,3 +1,4 @@
+import { _, N_ } from './translation.js';
 import { PAPER_SHADERS } from './paper-catalog.js';
 import { migratePaperTexture } from './paper-migration.js';
 
@@ -6,58 +7,58 @@ export const SHADERS = PAPER_SHADERS;
 const CURATED = [
   {
     id: 'aurora',
-    name: 'Aurora',
+    name: N_('Aurora'),
     shader: 'mesh',
-    description: 'A slow drift of violet, blue, and light.',
+    description: N_('A slow drift of violet, blue, and light.'),
     colors: ['#171346', '#6456C8', '#A1CEE8', '#E4AFE5'],
     frame: 6200,
   },
   {
     id: 'daybreak',
-    name: 'Daybreak',
+    name: N_('Daybreak'),
     shader: 'mesh',
-    description: 'The softer side of the morning.',
+    description: N_('The softer side of the morning.'),
     colors: ['#ED7455', '#F5BEAA', '#FFF0CF', '#9FADD9'],
     frame: 12500,
   },
   {
     id: 'tidal',
-    name: 'Tidal',
+    name: N_('Tidal'),
     shader: 'simplex',
-    description: 'Cool currents finding their own rhythm.',
+    description: N_('Cool currents finding their own rhythm.'),
     colors: ['#102E44', '#367A93', '#97CDC8', '#E0EEE2'],
     frame: 4400,
     scale: 0.65,
   },
   {
     id: 'dusk',
-    name: 'Dusk',
+    name: N_('Dusk'),
     shader: 'mesh',
-    description: 'The last light, held a little longer.',
+    description: N_('The last light, held a little longer.'),
     colors: ['#231E46', '#944C91', '#E48E96', '#EEBD93'],
     frame: 19200,
   },
   {
     id: 'ribbon',
-    name: 'Ribbon',
+    name: N_('Ribbon'),
     shader: 'swirl',
-    description: 'Broad folds of color in gentle motion.',
+    description: N_('Broad folds of color in gentle motion.'),
     colors: ['#789EDD', '#C5AFF1', '#EBD7F0', '#5564A8'],
     frame: 3200,
   },
   {
     id: 'moss',
-    name: 'Moss',
+    name: N_('Moss'),
     shader: 'mesh',
-    description: 'A quiet patch of green for your desktop.',
+    description: N_('A quiet patch of green for your desktop.'),
     colors: ['#122C2C', '#547D68', '#A8B994', '#E0DBBC'],
     frame: 9100,
   },
   {
     id: 'contour',
-    name: 'Contour',
+    name: N_('Contour'),
     shader: 'simplex',
-    description: 'A landscape drawn in flowing layers.',
+    description: N_('A landscape drawn in flowing layers.'),
     colors: ['#282D53', '#766DA1', '#C4A5BB', '#EAD7CE'],
     frame: 17600,
     scale: 0.7,
@@ -65,34 +66,34 @@ const CURATED = [
   },
   {
     id: 'pearl',
-    name: 'Pearl',
+    name: N_('Pearl'),
     shader: 'swirl',
-    description: 'A little iridescence, without the noise.',
+    description: N_('A little iridescence, without the noise.'),
     colors: ['#C1C7E1', '#F0DEDD', '#F9F4E8', '#879EAE'],
     frame: 1500,
     params: { twist: 0.35, bandCount: 2, softness: 1 },
   },
   {
     id: 'ember',
-    name: 'Ember',
+    name: N_('Ember'),
     shader: 'mesh',
-    description: 'Warm color with a darker heart.',
+    description: N_('Warm color with a darker heart.'),
     colors: ['#321F36', '#913D58', '#DB7962', '#F0BD87'],
     frame: 22300,
   },
 ];
 
 export const COMMON_FIELDS = [
-  { key: 'scale', label: 'Scale', min: 0.01, max: 4, step: 0.01 },
-  { key: 'rotation', label: 'Rotation', min: 0, max: 360, step: 0.01 },
-  { key: 'offsetX', label: 'Offset X', min: -1, max: 1, step: 0.01 },
-  { key: 'offsetY', label: 'Offset Y', min: -1, max: 1, step: 0.01 },
-  { key: 'originX', label: 'Origin X', min: 0, max: 1, step: 0.01 },
-  { key: 'originY', label: 'Origin Y', min: 0, max: 1, step: 0.01 },
-  { key: 'worldWidth', label: 'World width', min: 0, max: 8192, step: 1 },
-  { key: 'worldHeight', label: 'World height', min: 0, max: 8192, step: 1 },
-  { key: 'speed', label: 'Speed', min: -20, max: 20, step: 0.01 },
-  { key: 'frame', label: 'Frame (ms)', min: -1e12, max: 1e12, step: 1 },
+  { key: 'scale', label: N_('Scale'), min: 0.01, max: 4, step: 0.01 },
+  { key: 'rotation', label: N_('Rotation'), min: 0, max: 360, step: 0.01 },
+  { key: 'offsetX', label: N_('Offset X'), min: -1, max: 1, step: 0.01 },
+  { key: 'offsetY', label: N_('Offset Y'), min: -1, max: 1, step: 0.01 },
+  { key: 'originX', label: N_('Origin X'), min: 0, max: 1, step: 0.01 },
+  { key: 'originY', label: N_('Origin Y'), min: 0, max: 1, step: 0.01 },
+  { key: 'worldWidth', label: N_('World width'), min: 0, max: 8192, step: 1 },
+  { key: 'worldHeight', label: N_('World height'), min: 0, max: 8192, step: 1 },
+  { key: 'speed', label: N_('Speed'), min: -20, max: 20, step: 0.01 },
+  { key: 'frame', label: N_('Frame (ms)'), min: -1e12, max: 1e12, step: 1 },
 ];
 
 export const PRESETS = [
@@ -312,6 +313,7 @@ function normalizeCollection(input, presets, recent = false) {
               ? 'Custom'
               : 'Original',
         preset,
+        ...(item?.builtinName === true ? { builtinName: true } : {}),
         ...(recent
           ? { target: item?.target === 'kitty' ? 'kitty' : 'desktop' }
           : {}),
@@ -321,21 +323,33 @@ function normalizeCollection(input, presets, recent = false) {
   return recent ? items.slice(0, 20) : items;
 }
 
-export function addFavorite(favorites, preset, name) {
+export function addFavorite(favorites, preset, name, builtinName = false) {
   const key = presetFingerprint(preset);
   return [
     {
       name,
+      ...(builtinName ? { builtinName: true } : {}),
       preset: normalizePreset(preset.id, preset),
     },
     ...favorites.filter((item) => presetFingerprint(item.preset) !== key),
   ];
 }
 
-export function recordRecent(recent, preset, name, target) {
+export function recordRecent(
+  recent,
+  preset,
+  name,
+  target,
+  builtinName = false,
+) {
   const key = presetFingerprint(preset);
   return [
-    { name, preset: normalizePreset(preset.id, preset), target },
+    {
+      name,
+      preset: normalizePreset(preset.id, preset),
+      target,
+      ...(builtinName ? { builtinName: true } : {}),
+    },
     ...recent.filter((item) => presetFingerprint(item.preset) !== key),
   ].slice(0, 20);
 }
@@ -395,7 +409,7 @@ export function filterPresets(category, query) {
   return PRESETS.filter(
     (preset) =>
       (category === 'All' || SHADERS[preset.shader].category === category) &&
-      `${preset.name} ${SHADERS[preset.shader].name}`
+      `${preset.name} ${SHADERS[preset.shader].name} ${_(preset.name)} ${_(SHADERS[preset.shader].name)}`
         .toLowerCase()
         .includes(search),
   );
@@ -411,6 +425,6 @@ export function validateDimensions(width, height) {
     height > 8192 ||
     width * height > 35_389_440
   )
-    throw new Error('Choose a wallpaper size up to 8K.');
+    throw new Error(_('Choose a wallpaper size up to 8K.'));
   return { width, height };
 }

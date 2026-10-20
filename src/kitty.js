@@ -1,3 +1,4 @@
+import { _ } from './i18n.js';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import { DATA_DIR, ROOT } from './paths.js';
@@ -79,7 +80,7 @@ export class KittyBackground {
     const binary = GLib.find_program_in_path('kitty');
     if (!binary)
       throw new Error(
-        'Install Kitty 0.49 or newer to use animated backgrounds.',
+        _('Install Kitty 0.49 or newer to use animated backgrounds.'),
       );
     const process = Gio.Subprocess.new(
       [binary, '--version'],
@@ -111,7 +112,9 @@ export class KittyBackground {
       (Number(version[1]) === 0 && Number(version[2]) < 49)
     )
       throw new Error(
-        'Animated backgrounds require Kitty 0.49 or newer. Choose Still image for older versions.',
+        _(
+          'Animated backgrounds require Kitty 0.49 or newer. Choose Still image for older versions.',
+        ),
       );
   }
 
@@ -178,7 +181,7 @@ export class KittyBackground {
   restore() {
     const { source, etag } = readConfig(this.config);
     if (!hasKittyBackground(source))
-      throw new Error('No Wallshader Kitty background was found.');
+      throw new Error(_('No Wallshader Kitty background was found.'));
     writeText(this.config, removeKittyBackground(source), etag);
   }
 }

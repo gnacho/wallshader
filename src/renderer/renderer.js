@@ -1,3 +1,4 @@
+import { N_ } from '../translation.js';
 import * as Paper from '@paper-design/shaders';
 import { createFrameClock } from './frame-clock.js';
 import { createFrameStats } from './frame-stats.js';
@@ -48,7 +49,7 @@ function reportDebugInfo() {
     contextLost: gl.isContextLost(),
     gpu:
       gl.getParameter(info ? info.UNMASKED_RENDERER_WEBGL : gl.RENDERER) ??
-      'Unavailable',
+      N_('Unavailable'),
   });
 }
 
@@ -117,7 +118,7 @@ async function shaderImage(state, data) {
   const source =
     data ?? (state.image === 'sample' ? sampleImage : Paper.emptyPixel);
   if (state.image.startsWith('file:///') && !data)
-    throw new Error('Choose the image again to reload this effect.');
+    throw new Error(N_('Choose the image again to reload this effect.'));
   const processor = {
     heatmap: Paper.toProcessedHeatmap,
     'liquid-metal': Paper.toProcessedLiquidMetal,
@@ -248,7 +249,11 @@ window.wallshader = {
   },
   async request(id, method, args = {}) {
     if (busy) {
-      send({ type: 'response', id, error: 'A render is already in progress.' });
+      send({
+        type: 'response',
+        id,
+        error: N_('A render is already in progress.'),
+      });
       return;
     }
     busy = true;
